@@ -1,0 +1,13 @@
+{
+  "itemGroup.dimensiontab": "Example Mod Tab",
+  "block.dimensiontab.example_block": "Example Block",
+  "item.dimensiontab.example_item": "Example Item",
+
+  "dimensiontab.configuration.title": "Dimension TAB Configs",
+  "dimensiontab.configuration.section.dimensiontab.common.toml": "Dimension TAB Configs",
+  "dimensiontab.configuration.section.dimensiontab.common.toml.title": "Dimension TAB Configs",
+  "dimensiontab.configuration.items": "Item List",
+  "dimensiontab.configuration.logDirtBlock": "Log Dirt Block",
+  "dimensiontab.configuration.magicNumberIntroduction": "Magic Number Text",
+  "dimensiontab.configuration.magicNumber": "Magic Number"
+}
