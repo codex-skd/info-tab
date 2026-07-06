@@ -1,13 +1,22 @@
 {
-  "itemGroup.dimensiontab": "Example Mod Tab",
-  "block.dimensiontab.example_block": "Example Block",
-  "item.dimensiontab.example_item": "Example Item",
+  "itemGroup.dimensiontab": "Dimension TAB",
 
-  "dimensiontab.configuration.title": "Dimension TAB Configs",
-  "dimensiontab.configuration.section.dimensiontab.common.toml": "Dimension TAB Configs",
-  "dimensiontab.configuration.section.dimensiontab.common.toml.title": "Dimension TAB Configs",
-  "dimensiontab.configuration.items": "Item List",
-  "dimensiontab.configuration.logDirtBlock": "Log Dirt Block",
-  "dimensiontab.configuration.magicNumberIntroduction": "Magic Number Text",
-  "dimensiontab.configuration.magicNumber": "Magic Number"
+  "dimensiontab.configuration.title": "Dimension TAB Config",
+  "dimensiontab.configuration.section.dimensiontab.common.toml": "Dimension TAB Common Config",
+  "dimensiontab.configuration.section.dimensiontab.common.toml.title": "Dimension TAB Config",
+  "dimensiontab.configuration.general": "General Configuration",
+  "dimensiontab.configuration.customization": "Customization",
+  "dimensiontab.configuration.listFormat": "Display Format",
+  "dimensiontab.configuration.dimPosition": "Dimension Tag Position",
+  "dimensiontab.configuration.enableAliases": "Enable Dimension Aliases",
+  "dimensiontab.configuration.dimensionColors": "Dimension Colors",
+  "dimensiontab.configuration.perDimColor": "Per-Dimension Colors",
+  "dimensiontab.configuration.defaultColor": "Default Color",
+  "dimensiontab.configuration.overworldColor": "Overworld Color",
+  "dimensiontab.configuration.netherColor": "Nether Color",
+  "dimensiontab.configuration.endColor": "End Color",
+  "dimensiontab.configuration.moddedDimensions": "Modded Dimensions",
+  "dimensiontab.configuration.dimAliases": "Dimension Aliases",
+  "dimensiontab.configuration.extra": "Extra Settings",
+  "dimensiontab.configuration.customColors": "Custom Dimension Colors"
 }
