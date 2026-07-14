@@ -1,25 +1,33 @@
+# Dimension Tab
 
-Installation information
-=======
+Mod server-side para NeoForge que muestra la dimensión actual de cada jugador en la lista de jugadores (tab list).
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Características
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+- Muestra la dimensión de cada jugador en el tab list
+- Colores personalizables por dimensión (Overworld, Nether, End, y dimensiones de mods)
+- Formato configurable con tokens: `%dim:name%`, `%dim:id%`, `%dim:namespace%`, `%dim:path%`
+- Aliases para dimensiones (nombres personalizados)
+- Posición del tag configurable: antes o después del nombre
+- Comando `/dimensiontab` para configuración en tiempo real
+- Pantalla de configuración en el menú de mods (solo cliente)
+- Sin dependencias externas
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## Requisitos
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+- **NeoForge** 26.1.2.76 o superior
+- **Minecraft** 26.1.2
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Instalación
+
+1. Descarga el JAR desde CurseForge
+2. Colócalo en la carpeta `mods` del servidor
+3. Los clientes no necesitan instalar nada
+
+## Compilación
+
+```bash
+./gradlew.bat build
+```
+
+El JAR se genera en `build/libs/dimensiontab-<version>.jar`.
