@@ -6,7 +6,6 @@ Displays the current dimension of each player in the **tab list**, making it eas
 - **Customizable format** — Use tokens like `%dim:name%`, `%dim:id%`, `%dim:namespace%`, `%dim:path%`
 - **Dimension aliases** — Give dimensions custom display names (e.g., show "Aether" instead of "aether:the_aether")
 - **Configurable position** — Prepend or append the dimension tag relative to the player name
-- **Optional chat display** — Toggle `dimInChatName` in the config to also show dimensions in chat
 - **In-game commands** — Full runtime configuration via `/dimensiontab`
 
 ## Server-side only
@@ -50,7 +49,7 @@ All settings can be changed via the config file (`dimensiontab-common.toml`), th
 ### Default Format
 
 ```
-%dim:name%
+[%dim:name%]
 ```
 
 ### Color Format
