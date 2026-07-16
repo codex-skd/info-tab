@@ -5,6 +5,12 @@ Todas las versiones notables de Dimension TAB estan documentadas aqui.
 El formato esta basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-07-16
+
+### Changed
+- Updated WORKFLOW.md with branch structure and English commit rules
+- Fixed tag format to `<mc-version>-neoforge-<version>` in release steps
+
 ## [1.0.0] - 2026-07-06
 
 ### Changed
