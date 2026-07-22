@@ -1,0 +1,40 @@
+# Changelog
+
+Todas las versiones notables de Dimension TAB estan documentadas aqui.
+
+El formato esta basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.1] - 2026-07-16
+
+### Changed
+- Updated WORKFLOW.md with branch structure and English commit rules
+- Fixed tag format to `<mc-version>-neoforge-<version>` in release steps
+
+## [1.0.0] - 2026-07-06
+
+### Changed
+- Formato por defecto cambiado a `[%dim:name%]` (con corchetes)
+
+### Removed
+- Soporte de chat: eliminado `NameFormat`, `DIM_IN_CHAT_NAME`, `CHAT_DIM_HOVER`. El mod solo muestra dimensiones en el tab list.
+
+## [0.1.1-beta] - 2026-07-06
+
+### Fixed
+- NPE en `TabListNameFormat` al conectar clientes: `getDisplayName()` devuelve null por defecto en esta API, ahora usa `player.getName()` como fallback
+
+## [0.1.0-beta] - 2026-07-06
+
+### Added
+- Muestra la dimension actual de cada jugador en el tab list (lista de jugadores)
+- Opcional: muestra la dimension en el nombre de chat (`dimInChatName`)
+- Colores personalizables por dimension (Overworld, Nether, End, modded)
+- Formato de visualizacion configurable con tokens: `%dim:name%`, `%dim:id%`, `%dim:namespace%`, `%dim:path%`
+- Posicion del tag configurable: prepend (antes del nombre) o append (despues)
+- Aliases para dimensiones (nombres personalizados)
+- Comando `/dimensiontab` con subcomandos para configuracion en tiempo real
+- Pantalla de configuracion integrada en el menu de mods (solo cliente)
+- Sin dependencias externas (solo NeoForge)
+- Mod server-side: no requiere instalacion en el cliente
+- Compatible con modpacks (displayTest = IGNORE_SERVER_VERSION)
