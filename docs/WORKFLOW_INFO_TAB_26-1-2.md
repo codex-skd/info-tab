@@ -11,14 +11,14 @@
 |---|---|---|
 | **snake_case** | `mod_id` en gradle.properties, assets/, packages Java | `infotab` |
 | **PascalCase** | Clases Java principales | `InfoTab` |
-| **camelCase** | Variables, métodos, config keys | `dimensionTab` |
+| **camelCase** | Variables, métodos, config keys | `infoTab` |
 | **Title Case** | Display name en README, CHANGELOG, docs, CurseForge | `Info TAB` |
 
 ### Ficheros de documentación
 
 | Fichero | Formato | Ejemplo |
 |---|---|---|
-| WORKFLOW | `WORKFLOW_<MOD_ID>_<MC-VERSION>.md` | `WORKFLOW_INFOTAB_26-1-2.md` |
+| WORKFLOW | `WORKFLOW_<MOD_ID>_<MC-VERSION>.md` | `WORKFLOW_INFO_TAB_26-1-2.md` |
 | CHANGELOG | `CHANGELOG.md` (fijo) | `CHANGELOG.md` |
 | README | `README.md` (fijo) | `README.md` |
 
@@ -28,7 +28,7 @@ Reglas:
 - `mod_id` en `gradle.properties` debe coincidir con el nombre del directorio del proyecto
 - El display name en `README.md` y `CHANGELOG.md` debe estar en **Title Case**
 - Las clases Java principales deben seguir el naming del `mod_id` pero en **PascalCase**
-- Las config keys en camelCase: `dimensionTab.enableFeature`
+- Las config keys en camelCase: `infoTab.enableFeature`
 
 ## Tipografía
 
@@ -65,7 +65,7 @@ infotab/
 ├── lib_ext/                            # Librerías externas para análisis de la sesión. NO versionado (.gitignore).
 ├── temp/                               # Archivos temporales. NO versionado (.gitignore).
 ├── docs/
-│   ├── WORKFLOW_INFOTAB_26-1-2.md # Este documento
+│   ├── WORKFLOW_INFO_TAB_26-1-2.md # Este documento
 │   └── curseforge/                    # Documentación para publicación en CurseForge
 │       ├── project_vars.md             # Variables del proyecto (ID, token, versiones)
 │       ├── project_description.md      # Descripción del proyecto
