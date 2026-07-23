@@ -46,7 +46,35 @@ public class AfkTracker {
     }
 
     @SubscribeEvent
-    public static void onPlayerInteract(PlayerInteractEvent event) {
+    public static void onPlayerRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+        if (event.getEntity() instanceof ServerPlayer sp) {
+            updateActivity(sp);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerRightClickItem(PlayerInteractEvent.RightClickItem event) {
+        if (event.getEntity() instanceof ServerPlayer sp) {
+            updateActivity(sp);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerRightClickEmpty(PlayerInteractEvent.RightClickEmpty event) {
+        if (event.getEntity() instanceof ServerPlayer sp) {
+            updateActivity(sp);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerLeftClickBlock(PlayerInteractEvent.LeftClickBlock event) {
+        if (event.getEntity() instanceof ServerPlayer sp) {
+            updateActivity(sp);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerEntityInteract(PlayerInteractEvent.EntityInteract event) {
         if (event.getEntity() instanceof ServerPlayer sp) {
             updateActivity(sp);
         }
