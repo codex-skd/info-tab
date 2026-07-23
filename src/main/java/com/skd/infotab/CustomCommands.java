@@ -68,7 +68,7 @@ public class CustomCommands {
         builder.then(Commands.literal("setting")
                 .then(Commands.argument("key", StringArgumentType.word())
                         .suggests((ctx, sb) -> SharedSuggestionProvider.suggest(
-                                Set.of("perDimColor", "enableAliases"), sb))
+                                Set.of("perDimColor", "enableAliases", "showAfk", "showDimension"), sb))
                         .then(Commands.argument("value", BoolArgumentType.bool())
                                 .executes(ctx -> setBoolSetting(ctx,
                                         StringArgumentType.getString(ctx, "key"),

@@ -68,12 +68,9 @@ public class InfoTab {
             }
 
             boolean afk = false;
-            if (player instanceof ServerPlayer sp) {
+            if (Config.SHOW_AFK.get() && player instanceof ServerPlayer sp) {
                 afk = AfkTracker.isAfk(sp);
             }
-
-            String color = Config.DEFAULT_COLOR.get();
-            MutableComponent dimComponent = HANDLER.makeDimensionComponent(player, color);
 
             MutableComponent newName = Component.literal("");
 
@@ -85,10 +82,16 @@ public class InfoTab {
                 newName.append(afkTag.withStyle(creme));
             }
 
-            if (Config.DIM_POSITION.get() == CommonUtils.DimensionPosition.PREPEND) {
-                newName.append(dimComponent).append(" ").append(currentName);
+            if (Config.SHOW_DIMENSION.get()) {
+                String color = Config.DEFAULT_COLOR.get();
+                MutableComponent dimComponent = HANDLER.makeDimensionComponent(player, color);
+                if (Config.DIM_POSITION.get() == CommonUtils.DimensionPosition.PREPEND) {
+                    newName.append(dimComponent).append(" ").append(currentName);
+                } else {
+                    newName.append(currentName).append(" ").append(dimComponent);
+                }
             } else {
-                newName.append(currentName).append(" ").append(dimComponent);
+                newName.append(currentName);
             }
 
             event.setDisplayName(newName);

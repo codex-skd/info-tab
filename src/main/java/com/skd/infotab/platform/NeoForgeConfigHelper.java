@@ -138,6 +138,12 @@ public class NeoForgeConfigHelper implements IConfigHelper {
             case "enableAliases":
                 Config.ENABLE_ALIASES.set(value);
                 break;
+            case "showAfk":
+                Config.SHOW_AFK.set(value);
+                break;
+            case "showDimension":
+                Config.SHOW_DIMENSION.set(value);
+                break;
         }
     }
 

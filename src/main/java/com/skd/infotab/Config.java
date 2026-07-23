@@ -22,6 +22,8 @@ public class Config {
     public static ModConfigSpec.ConfigValue<String> END_COLOR;
     public static ModConfigSpec.BooleanValue PER_DIM_COLOR;
     public static ModConfigSpec.BooleanValue ENABLE_ALIASES;
+    public static ModConfigSpec.BooleanValue SHOW_AFK;
+    public static ModConfigSpec.BooleanValue SHOW_DIMENSION;
     public static ModConfigSpec.ConfigValue<List<? extends String>> MODDED_DIMS;
     public static ModConfigSpec.ConfigValue<List<? extends String>> DIM_ALIASES;
     public static ModConfigSpec.ConfigValue<List<? extends String>> CUSTOM_COLORS;
@@ -42,6 +44,12 @@ public class Config {
         ENABLE_ALIASES = builder
                 .comment("Enable dimension aliases (custom names for dimensions)")
                 .define("enableAliases", true);
+        SHOW_AFK = builder
+                .comment("Show [AFK] prefix for inactive players in the tab list")
+                .define("showAfk", true);
+        SHOW_DIMENSION = builder
+                .comment("Show dimension tag in the tab list")
+                .define("showDimension", true);
         builder.pop();
 
         builder.comment("Per-dimension color customization").push("dimensionColors");

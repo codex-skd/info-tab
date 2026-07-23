@@ -5,6 +5,11 @@ Todas las versiones notables de Info TAB estan documentadas aqui.
 El formato esta basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2-beta.4] - 2026-07-23
+
+### Added
+- Config options `showAfk` and `showDimension` to toggle AFK prefix and dimension tag visibility (both default: true)
+
 ## [1.0.2-beta.3] - 2026-07-23
 
 ### Changed

@@ -18,5 +18,7 @@
   "infotab.configuration.moddedDimensions": "Modded Dimensions",
   "infotab.configuration.dimAliases": "Dimension Aliases",
   "infotab.configuration.extra": "Extra Settings",
-  "infotab.configuration.customColors": "Custom Dimension Colors"
+  "infotab.configuration.customColors": "Custom Dimension Colors",
+  "infotab.configuration.showAfk": "Show AFK Status",
+  "infotab.configuration.showDimension": "Show Dimension"
 }
