@@ -5,6 +5,14 @@ Todas las versiones notables de Info TAB estan documentadas aqui.
 El formato esta basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2-beta.5] - 2026-07-23
+
+### Added
+- Config option `afkTimeoutMinutes` to set AFK inactivity threshold (default: 10 min)
+
+### Fixed
+- AFK detection now checks movement every 5 seconds via server tick, no longer depends on tab list refresh
+
 ## [1.0.2-beta.4] - 2026-07-23
 
 ### Added

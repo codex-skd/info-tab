@@ -23,6 +23,7 @@ public class Config {
     public static ModConfigSpec.BooleanValue PER_DIM_COLOR;
     public static ModConfigSpec.BooleanValue ENABLE_ALIASES;
     public static ModConfigSpec.BooleanValue SHOW_AFK;
+    public static ModConfigSpec.IntValue AFK_TIMEOUT_MINUTES;
     public static ModConfigSpec.BooleanValue SHOW_DIMENSION;
     public static ModConfigSpec.ConfigValue<List<? extends String>> MODDED_DIMS;
     public static ModConfigSpec.ConfigValue<List<? extends String>> DIM_ALIASES;
@@ -47,6 +48,9 @@ public class Config {
         SHOW_AFK = builder
                 .comment("Show [AFK] prefix for inactive players in the tab list")
                 .define("showAfk", true);
+        AFK_TIMEOUT_MINUTES = builder
+                .comment("Minutes of inactivity before showing [AFK] prefix")
+                .defineInRange("afkTimeoutMinutes", 10, 1, 9999);
         SHOW_DIMENSION = builder
                 .comment("Show dimension tag in the tab list")
                 .define("showDimension", true);

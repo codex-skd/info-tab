@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.ServerChatEvent;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 
 import java.util.Map;
@@ -14,9 +15,9 @@ import java.util.concurrent.ConcurrentHashMap;
 @EventBusSubscriber(modid = InfoTab.MODID)
 public class AfkTracker {
 
-    private static final long AFK_TIMEOUT = 600_000;
     private static final Map<ServerPlayer, Long> lastActivity = new ConcurrentHashMap<>();
     private static final Map<ServerPlayer, Vec3> lastPosition = new ConcurrentHashMap<>();
+    private static int tickCounter = 0;
 
     public static boolean isAfk(ServerPlayer player) {
         Long last = lastActivity.get(player);
@@ -25,14 +26,8 @@ public class AfkTracker {
             lastPosition.put(player, player.position());
             return false;
         }
-        Vec3 currentPos = player.position();
-        Vec3 oldPos = lastPosition.get(player);
-        if (oldPos != null && !oldPos.equals(currentPos)) {
-            lastActivity.put(player, System.currentTimeMillis());
-            lastPosition.put(player, currentPos);
-            return false;
-        }
-        return System.currentTimeMillis() - last > AFK_TIMEOUT;
+        long timeout = Config.AFK_TIMEOUT_MINUTES.get() * 60_000L;
+        return System.currentTimeMillis() - last > timeout;
     }
 
     public static void updateActivity(ServerPlayer player) {
@@ -43,6 +38,22 @@ public class AfkTracker {
     public static void removePlayer(ServerPlayer player) {
         lastActivity.remove(player);
         lastPosition.remove(player);
+    }
+
+    @SubscribeEvent
+    public static void onServerTick(ServerTickEvent.Post event) {
+        tickCounter++;
+        if (tickCounter % 100 != 0) return;
+        for (var player : event.getServer().getPlayerList().getPlayers()) {
+            Vec3 currentPos = player.position();
+            Vec3 oldPos = lastPosition.get(player);
+            if (oldPos != null && !oldPos.equals(currentPos)) {
+                lastActivity.put(player, System.currentTimeMillis());
+                lastPosition.put(player, currentPos);
+            } else if (oldPos == null) {
+                lastPosition.put(player, currentPos);
+            }
+        }
     }
 
     @SubscribeEvent
