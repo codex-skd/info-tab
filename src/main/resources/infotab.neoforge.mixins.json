@@ -1,8 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.skd.dimensiontab.mixin",
-  "refmap": "dimensiontab.refmap.json",
+  "package": "com.skd.infotab.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [],

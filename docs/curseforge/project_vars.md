@@ -4,9 +4,9 @@
 
 | Variable | Valor |
 |----------|-------|
-| `curseforge_project_id` | `1599911` |
-| `mod_id` | `dimensiontab` |
-| `display_name` | `Dimension TAB` (separado, no junto) |
+| `curseforge_project_id` | `TBD` |
+| `mod_id` | `infotab` |
+| `display_name` | `Info TAB` |
 
 ## Tokens
 

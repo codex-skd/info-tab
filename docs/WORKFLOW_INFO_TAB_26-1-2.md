@@ -1,7 +1,7 @@
-# Flujo de trabajo — Dimension TAB (NeoForge)
+# Flujo de trabajo — Info TAB (NeoForge)
 
 > **Versión del workflow**: 1.1.0 (codex-docs)
-> Este archivo pertenece al proyecto **Dimension TAB**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
+> Este archivo pertenece al proyecto **Info TAB**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
 
@@ -9,16 +9,16 @@
 
 | Convención | Uso | Ejemplo |
 |---|---|---|
-| **snake_case** | `mod_id` en gradle.properties, assets/, packages Java | `dimensiontab` |
-| **PascalCase** | Clases Java principales | `DimensionTAB` |
+| **snake_case** | `mod_id` en gradle.properties, assets/, packages Java | `infotab` |
+| **PascalCase** | Clases Java principales | `InfoTab` |
 | **camelCase** | Variables, métodos, config keys | `dimensionTab` |
-| **Title Case** | Display name en README, CHANGELOG, docs, CurseForge | `Dimension TAB` |
+| **Title Case** | Display name en README, CHANGELOG, docs, CurseForge | `Info TAB` |
 
 ### Ficheros de documentación
 
 | Fichero | Formato | Ejemplo |
 |---|---|---|
-| WORKFLOW | `WORKFLOW_<MOD_ID>_<MC-VERSION>.md` | `WORKFLOW_DIMENSIONTAB_26-1-2.md` |
+| WORKFLOW | `WORKFLOW_<MOD_ID>_<MC-VERSION>.md` | `WORKFLOW_INFOTAB_26-1-2.md` |
 | CHANGELOG | `CHANGELOG.md` (fijo) | `CHANGELOG.md` |
 | README | `README.md` (fijo) | `README.md` |
 
@@ -41,31 +41,31 @@ Reglas:
 ## Estructura del proyecto
 
 ```
-dimensiontab/
+infotab/
 ├── build.gradle                        # Build con net.neoforged.moddev
 ├── gradle.properties                   # mod_id, mod_version, mod_group_id...
 ├── settings.gradle
 ├── src/
 │   ├── main/
-│   │   ├── java/com/skd/dimensiontab/  # Código fuente del mod
+│   │   ├── java/com/skd/infotab/  # Código fuente del mod
 │   │   ├── resources/
-│   │   │   ├── assets/dimensiontab/    # Texturas, shaders, lang, modelos...
+│   │   │   ├── assets/infotab/    # Texturas, shaders, lang, modelos...
 │   │   │   │   └── icon.png           # Logo del mod (64x64 píxeles, referenciado en neoforge.mods.toml)
 │   │   │   ├── templates/
 │   │   │   │   └── META-INF/
 │   │   │   │       └── neoforge.mods.toml  # Template con placeholders ${...}
 │   │   │   ├── META-INF/
 │   │   │   │   └── accesstransformer.cfg
-│   │   │   ├── dimensiontab.mixins.json
-│   │   │   ├── dimensiontab.neoforge.mixins.json
-│   │   │   └── dimensiontab.png        # Logo del mod
+│   │   │   ├── infotab.mixins.json
+│   │   │   ├── infotab.neoforge.mixins.json
+│   │   │   └── infotab.png        # Logo del mod
 │   │   └── templates/                 # (alternativa legacy, evitar)
 │   ├── main/java/...                  # Código fuente
 ├── libs/                               # Dependencias reales del mod (JARs necesarios para compilar). Versionado.
 ├── lib_ext/                            # Librerías externas para análisis de la sesión. NO versionado (.gitignore).
 ├── temp/                               # Archivos temporales. NO versionado (.gitignore).
 ├── docs/
-│   ├── WORKFLOW_DIMENSIONTAB_26-1-2.md # Este documento
+│   ├── WORKFLOW_INFOTAB_26-1-2.md # Este documento
 │   └── curseforge/                    # Documentación para publicación en CurseForge
 │       ├── project_vars.md             # Variables del proyecto (ID, token, versiones)
 │       ├── project_description.md      # Descripción del proyecto
@@ -170,7 +170,7 @@ El changelog se envía en formato **HTML**, no Markdown. Aunque CurseForge acept
 
 <h3>Technical Changes</h3>
 <ul>
-<li><code>DimensionTAB.java</code> — event handler adjustments.</li>
+<li><code>InfoTab.java</code> — event handler adjustments.</li>
 </ul>
 ```
 
@@ -272,7 +272,7 @@ El JAR generado sigue el formato `<mod_id>-<minecraft_version>-<framework>-<mod_
 
 | Ejemplo | Significado |
 |---|---|
-| `dimensiontab-26.1.2-neoforge-1.0.1.jar` | NeoForge 26.1.2, release 1.0.1 |
+| `infotab-26.1.2-neoforge-1.0.1.jar` | NeoForge 26.1.2, release 1.0.1 |
 
 El framework puede ser `neoforge`, `forge` o `fabric` según corresponda. Se configura en `build.gradle`:
 
@@ -474,8 +474,8 @@ git push
 #    Solo hacer si el usuario confirma.
 
 # 3. Si el usuario confirma:
-#    cp build/libs/dimensiontab-26.1.2-neoforge-1.0.1.jar /ruta/a/la/instancia/mods/
-#    rm /ruta/a/la/instancia/mods/dimensiontab-26.1.2-neoforge-version-anterior.jar
+#    cp build/libs/infotab-26.1.2-neoforge-1.0.1.jar /ruta/a/la/instancia/mods/
+#    rm /ruta/a/la/instancia/mods/infotab-26.1.2-neoforge-version-anterior.jar
 ```
 
 ### 3. Probar en instancia
@@ -511,7 +511,7 @@ git push origin 26.1.2-neoforge-beta.3
 
 # 8. PREGUNTAR: "¿Subir JAR a CurseForge ahora?"
 #    Solo subir si el usuario confirma.
-#    El JAR está en build/libs/dimensiontab-26.1.2-neoforge-0.0.0-beta.3.jar
+#    El JAR está en build/libs/infotab-26.1.2-neoforge-0.0.0-beta.3.jar
 
 # 9. Subir a CurseForge usando el script compartido
 #    powershell -File ../codex-docs/scripts/curseforge-upload.ps1
@@ -567,7 +567,7 @@ git push
 - **Sin archivos basura en el repositorio**: eliminar `nul`, `TEMPLATE_LICENSE.txt`, `errors.txt`, `build_errors.txt` y otros artefactos temporales antes de commitear
 - **README.md actualizado y en inglés**: el README debe reflejar siempre el estado actual del mod, con descripción, requisitos, instalación y enlaces. Debe estar escrito en **inglés** (en-US) por ser la puerta de entrada al proyecto desde GitHub
 - **Sin residuos de mod original**: si el mod está basado en otro mod existente (fork/referencia), no debe quedar ningún rastro accidental del mod original. Revisar:
-  - Nombres de paquetes (`com/oldauthor/oldmod/` → `com/skd/dimensiontab/`)
+  - Nombres de paquetes (`com/oldauthor/oldmod/` → `com/skd/infotab/`)
   - Nombres de clases, métodos y variables
   - Referencias en `neoforge.mods.toml` (modid, description, credits)
   - Textos en lang/ (en_us.json, etc.)

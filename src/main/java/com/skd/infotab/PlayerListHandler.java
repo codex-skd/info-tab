@@ -1,4 +1,4 @@
-package com.skd.dimensiontab;
+package com.skd.infotab;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -28,21 +28,21 @@ public abstract class PlayerListHandler {
             return color;
         }
 
-        String customColor = com.skd.dimensiontab.platform.Services.CONFIG.GetCustomColor(dimension.toString());
+        String customColor = com.skd.infotab.platform.Services.CONFIG.GetCustomColor(dimension.toString());
         if (customColor != null) {
             return customColor;
         }
 
         return switch (dimension.toString()) {
-            case "minecraft:overworld" -> com.skd.dimensiontab.platform.Services.CONFIG.OverworldColor();
-            case "minecraft:the_nether" -> com.skd.dimensiontab.platform.Services.CONFIG.NetherColor();
-            case "minecraft:the_end" -> com.skd.dimensiontab.platform.Services.CONFIG.EndColor();
+            case "minecraft:overworld" -> com.skd.infotab.platform.Services.CONFIG.OverworldColor();
+            case "minecraft:the_nether" -> com.skd.infotab.platform.Services.CONFIG.NetherColor();
+            case "minecraft:the_end" -> com.skd.infotab.platform.Services.CONFIG.EndColor();
             default -> color;
         };
     }
 
     private MutableComponent extractTokensFromFormat(Player player, Identifier dimension) {
-        String format = com.skd.dimensiontab.platform.Services.CONFIG.ListFormat();
+        String format = com.skd.infotab.platform.Services.CONFIG.ListFormat();
         MutableComponent result = Component.literal("");
         StringBuilder currentText = new StringBuilder();
         boolean inToken = false;

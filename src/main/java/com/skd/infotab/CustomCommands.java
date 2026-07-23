@@ -1,10 +1,10 @@
-package com.skd.dimensiontab;
+package com.skd.infotab;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
-import com.skd.dimensiontab.platform.Services;
+import com.skd.infotab.platform.Services;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.SharedSuggestionProvider;
@@ -17,7 +17,7 @@ import java.util.Set;
 public class CustomCommands {
 
     public static void registerCommands(CommandDispatcher<CommandSourceStack> dispatcher) {
-        var builder = Commands.literal("dimensiontab")
+        var builder = Commands.literal("infotab")
                 .requires(src -> src.getEntity() instanceof ServerPlayer)
                 .executes(ctx -> showHelp(ctx));
 
@@ -124,19 +124,19 @@ public class CustomCommands {
 
     private static int showHelp(CommandContext<CommandSourceStack> ctx) {
         CommandSourceStack src = ctx.getSource();
-        src.sendSuccess(() -> Component.literal("=== Dimension TAB Commands ==="), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab color <dimension> <color> - Set color for a dimension"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab color default|overworld|nether|end <color> - Set preset dimension color"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab alias <dimension> <alias> - Set an alias for a dimension"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab resetalias <dimension> - Reset a dimension alias"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab resetcolor <dimension> - Reset a custom dimension color"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab format <format> - Set the display format (use %dim:name%, %dim:id%, etc.)"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab placement prepend|append - Set dimension tag position"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab setting <key> <true|false> - Toggle a boolean setting"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab dimid - Show your current dimension ID"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab refresh - Refresh all online players' display names"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab list aliases|colors - List all aliases or custom colors"), false);
-        src.sendSuccess(() -> Component.literal("/dimensiontab reload - Reload config and refresh players"), false);
+        src.sendSuccess(() -> Component.literal("=== Info TAB Commands ==="), false);
+        src.sendSuccess(() -> Component.literal("/infotab color <dimension> <color> - Set color for a dimension"), false);
+        src.sendSuccess(() -> Component.literal("/infotab color default|overworld|nether|end <color> - Set preset dimension color"), false);
+        src.sendSuccess(() -> Component.literal("/infotab alias <dimension> <alias> - Set an alias for a dimension"), false);
+        src.sendSuccess(() -> Component.literal("/infotab resetalias <dimension> - Reset a dimension alias"), false);
+        src.sendSuccess(() -> Component.literal("/infotab resetcolor <dimension> - Reset a custom dimension color"), false);
+        src.sendSuccess(() -> Component.literal("/infotab format <format> - Set the display format (use %dim:name%, %dim:id%, etc.)"), false);
+        src.sendSuccess(() -> Component.literal("/infotab placement prepend|append - Set dimension tag position"), false);
+        src.sendSuccess(() -> Component.literal("/infotab setting <key> <true|false> - Toggle a boolean setting"), false);
+        src.sendSuccess(() -> Component.literal("/infotab dimid - Show your current dimension ID"), false);
+        src.sendSuccess(() -> Component.literal("/infotab refresh - Refresh all online players' display names"), false);
+        src.sendSuccess(() -> Component.literal("/infotab list aliases|colors - List all aliases or custom colors"), false);
+        src.sendSuccess(() -> Component.literal("/infotab reload - Reload config and refresh players"), false);
         return 1;
     }
 

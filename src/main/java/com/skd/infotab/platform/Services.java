@@ -1,6 +1,6 @@
-package com.skd.dimensiontab.platform;
+package com.skd.infotab.platform;
 
-import com.skd.dimensiontab.platform.services.IConfigHelper;
+import com.skd.infotab.platform.services.IConfigHelper;
 
 import java.util.ServiceLoader;
 

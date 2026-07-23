@@ -1,8 +1,10 @@
-package com.skd.dimensiontab;
+package com.skd.infotab;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.Style;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
@@ -16,15 +18,15 @@ import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import org.slf4j.Logger;
 
-@Mod(DimensionTAB.MODID)
-public class DimensionTAB {
+@Mod(InfoTab.MODID)
+public class InfoTab {
 
-    public static final String MODID = "dimensiontab";
+    public static final String MODID = "infotab";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     private static final PlayerListHandler HANDLER = new PlayerListHandlerNeoForge();
 
-    public DimensionTAB(IEventBus modEventBus, ModContainer modContainer) {
+    public InfoTab(IEventBus modEventBus, ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -64,15 +66,31 @@ public class DimensionTAB {
             if (currentName == null) {
                 currentName = player.getName();
             }
+
+            boolean afk = false;
+            if (player instanceof ServerPlayer sp) {
+                afk = AfkTracker.isAfk(sp);
+            }
+
             String color = Config.DEFAULT_COLOR.get();
             MutableComponent dimComponent = HANDLER.makeDimensionComponent(player, color);
 
-            MutableComponent newName;
-            if (Config.DIM_POSITION.get() == CommonUtils.DimensionPosition.PREPEND) {
-                newName = Component.literal("").append(dimComponent).append(" ").append(currentName);
-            } else {
-                newName = Component.literal("").append(currentName).append(" ").append(dimComponent);
+            MutableComponent newName = Component.literal("");
+
+            if (afk) {
+                MutableComponent afkTag = Component.literal("[AFK] ");
+                Style creme = Style.EMPTY.withColor(
+                        net.minecraft.network.chat.TextColor.parseColor("#FFFDD0").result().orElse(
+                                net.minecraft.network.chat.TextColor.fromLegacyFormat(ChatFormatting.WHITE)));
+                newName.append(afkTag.withStyle(creme));
             }
+
+            if (Config.DIM_POSITION.get() == CommonUtils.DimensionPosition.PREPEND) {
+                newName.append(dimComponent).append(" ").append(currentName);
+            } else {
+                newName.append(currentName).append(" ").append(dimComponent);
+            }
+
             event.setDisplayName(newName);
         }
 
@@ -90,7 +108,7 @@ public class DimensionTAB {
         @SubscribeEvent
         public static void onConfigReloading(ModConfigEvent.Reloading event) {
             if (event.getConfig().getType() == ModConfig.Type.COMMON && event.getConfig().getModId().equals(MODID)) {
-                LOGGER.info("Dimension TAB config reloaded");
+                LOGGER.info("Info TAB config reloaded");
             }
         }
     }

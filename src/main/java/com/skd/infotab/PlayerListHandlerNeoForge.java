@@ -1,6 +1,6 @@
-package com.skd.dimensiontab;
+package com.skd.infotab;
 
-import com.skd.dimensiontab.platform.Services;
+import com.skd.infotab.platform.Services;
 
 public class PlayerListHandlerNeoForge extends PlayerListHandler {
 

@@ -1,9 +1,18 @@
 # Changelog
 
-Todas las versiones notables de Dimension TAB estan documentadas aqui.
+Todas las versiones notables de Info TAB estan documentadas aqui.
 
 El formato esta basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.2-beta.1] - 2026-07-21
+
+### Added
+- AFK detection: players inactive for 10+ minutes show `[AFK]` prefix in creme color
+- Mod renamed from Dimension TAB to Info TAB (new mod_id: `infotab`)
+
+### Changed
+- Display format updated: `[AFK] PlayerName [%dim:name%]`
 
 ## [1.0.1] - 2026-07-16
 
@@ -28,7 +37,6 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 
 ### Added
 - Muestra la dimension actual de cada jugador en el tab list (lista de jugadores)
-- Opcional: muestra la dimension en el nombre de chat (`dimInChatName`)
 - Colores personalizables por dimension (Overworld, Nether, End, modded)
 - Formato de visualizacion configurable con tokens: `%dim:name%`, `%dim:id%`, `%dim:namespace%`, `%dim:path%`
 - Posicion del tag configurable: prepend (antes del nombre) o append (despues)

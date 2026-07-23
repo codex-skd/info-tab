@@ -1,9 +1,9 @@
-package com.skd.dimensiontab.platform;
+package com.skd.infotab.platform;
 
-import com.skd.dimensiontab.CommonUtils;
-import com.skd.dimensiontab.Config;
-import com.skd.dimensiontab.PlayerListHandler;
-import com.skd.dimensiontab.platform.services.IConfigHelper;
+import com.skd.infotab.CommonUtils;
+import com.skd.infotab.Config;
+import com.skd.infotab.PlayerListHandler;
+import com.skd.infotab.platform.services.IConfigHelper;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.players.PlayerList;
 

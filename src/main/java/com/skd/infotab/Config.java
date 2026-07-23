@@ -1,4 +1,4 @@
-package com.skd.dimensiontab;
+package com.skd.infotab;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
@@ -30,7 +30,7 @@ public class Config {
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
-        builder.comment("Dimension TAB Configuration").push("general");
+        builder.comment("Info TAB Configuration").push("general");
 
         builder.comment("General customization options").push("customization");
         LIST_FORMAT = builder

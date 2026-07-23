@@ -1,4 +1,4 @@
-package com.skd.dimensiontab;
+package com.skd.infotab;
 
 import net.minecraft.resources.Identifier;
 

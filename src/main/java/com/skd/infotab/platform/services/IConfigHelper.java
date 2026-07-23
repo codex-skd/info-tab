@@ -1,6 +1,6 @@
-package com.skd.dimensiontab.platform.services;
+package com.skd.infotab.platform.services;
 
-import com.skd.dimensiontab.CommonUtils.DimensionPosition;
+import com.skd.infotab.CommonUtils.DimensionPosition;
 import net.minecraft.server.players.PlayerList;
 
 import java.util.List;

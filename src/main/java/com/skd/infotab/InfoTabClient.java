@@ -1,4 +1,4 @@
-package com.skd.dimensiontab;
+package com.skd.infotab;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -9,10 +9,10 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-@Mod(value = DimensionTAB.MODID, dist = Dist.CLIENT)
-public class DimensionTABClient {
+@Mod(value = InfoTab.MODID, dist = Dist.CLIENT)
+public class InfoTabClient {
 
-    public DimensionTABClient(ModContainer container) {
+    public InfoTabClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 }

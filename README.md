@@ -1,15 +1,16 @@
-# Dimension TAB
+# Info TAB
 
-Server-side NeoForge mod that displays each player's current dimension in the tab list.
+Server-side NeoForge mod that displays player info in the tab list: dimension, AFK status, and more.
 
 ## Features
 
 - Shows the dimension of each player in the tab list
+- **AFK Detection** — players inactive for 10+ minutes show a `[AFK]` prefix
 - Per-dimension colors (Overworld, Nether, End, and modded dimensions)
 - Configurable format with tokens: `%dim:name%`, `%dim:id%`, `%dim:namespace%`, `%dim:path%`
 - Dimension aliases (custom display names)
 - Configurable tag position (prepend or append)
-- `/dimensiontab` command for runtime configuration
+- `/infotab` command for runtime configuration
 - Config screen in the Mods menu (client-side only)
 - No external dependencies
 
@@ -30,7 +31,7 @@ Server-side NeoForge mod that displays each player's current dimension in the ta
 ./gradlew.bat build
 ```
 
-The JAR is generated at `build/libs/dimensiontab-26.1.2-neoforge-<version>.jar`.
+The JAR is generated at `build/libs/infotab-26.1.2-neoforge-<version>.jar`.
 
 ## Credits
 
