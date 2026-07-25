@@ -1,3 +1,18 @@
+## [1.0.2-beta.6] - 2026-07-23
+
+
+
+### Added
+
+- Server debug logs for AFK tracking (start, countdown, activation, return)
+
+
+
+### Fixed
+
+- AFK detection logic: status tracking via afkStatus map
+
+
 # Changelog
 
 Todas las versiones notables de Info TAB estan documentadas aqui.
