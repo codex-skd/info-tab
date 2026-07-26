@@ -60,9 +60,10 @@ public class AfkTracker {
     @SubscribeEvent
     public static void onServerTick(ServerTickEvent.Post event) {
         tickCounter++;
-        // Every 5 seconds (100 ticks): track movement
+        // Every 5 seconds (100 ticks): track movement and evaluate AFK
         if (tickCounter % 100 == 0) {
             for (var player : event.getServer().getPlayerList().getPlayers()) {
+                if (!(player instanceof ServerPlayer sp)) continue;
                 Vec3 currentPos = player.position();
                 Vec3 oldPos = lastPosition.get(player);
                 if (oldPos != null && !oldPos.equals(currentPos)) {
@@ -74,6 +75,8 @@ public class AfkTracker {
                 } else if (oldPos == null) {
                     lastPosition.put(player, currentPos);
                 }
+                // Evaluate AFK status so the log fires even without TabListNameFormat
+                isAfk(sp);
             }
         }
         // Every 30 seconds (600 ticks): log countdown for players approaching AFK

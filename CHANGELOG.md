@@ -1,3 +1,8 @@
+## [1.0.2-beta.7] - 2026-07-26
+
+### Fixed
+- AFK detection: evaluate isAfk() every 5 seconds via server tick, not only on TabListNameFormat event
+
 ## [1.0.2-beta.6] - 2026-07-23
 
 
