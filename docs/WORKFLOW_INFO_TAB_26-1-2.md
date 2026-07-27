@@ -48,10 +48,13 @@ Todos los mods siguen esta estructura en el directorio raíz (`Mods_Minecraft/`)
 Ejemplo para este mod:
 
 ```
-info_tab/                    # Mod padre (organizativo)
+info_tab/                    # Mod padre (organizativo, sin .git)
 └── 26.1.2/                  # Repositorio independiente en GitLab
+    ├── .git/
     ├── gradle.properties → minecraft_version=26.1.2
+    ├── build.gradle
     ├── src/
+    ├── docs/
     └── ...
 ```
 
@@ -73,45 +76,46 @@ info_tab/                    # Mod padre (organizativo)
 ## Estructura del proyecto
 
 ```
-infotab/
-├── build.gradle                        # Build con net.neoforged.moddev
-├── gradle.properties                   # mod_id, mod_version, mod_group_id...
-├── settings.gradle
-├── src/
-│   ├── main/
-│   │   ├── java/com/skd/infotab/  # Código fuente del mod
-│   │   ├── resources/
-│   │   │   ├── assets/infotab/    # Texturas, shaders, lang, modelos...
-│   │   │   │   └── icon.png           # Logo del mod (64x64 píxeles, referenciado en neoforge.mods.toml)
-│   │   │   ├── templates/
-│   │   │   │   └── META-INF/
-│   │   │   │       └── neoforge.mods.toml  # Template con placeholders ${...}
-│   │   │   ├── META-INF/
-│   │   │   │   └── accesstransformer.cfg
-│   │   │   ├── infotab.mixins.json
-│   │   │   ├── infotab.neoforge.mixins.json
-│   │   │   └── infotab.png        # Logo del mod
-│   │   └── templates/                 # (alternativa legacy, evitar)
-│   ├── main/java/...                  # Código fuente
-├── libs/                               # Dependencias reales del mod (JARs necesarios para compilar). Versionado.
-├── lib_ext/                            # Librerías externas para análisis de la sesión. NO versionado (.gitignore).
-├── temp/                               # Archivos temporales. NO versionado (.gitignore).
-├── docs/
-│   ├── WORKFLOW_INFO_TAB_26-1-2.md # Este documento
-│   └── curseforge/                    # Documentación para publicación en CurseForge
-│       ├── project_vars.md             # Variables del proyecto (ID, token, versiones)
-│       ├── project_description.md      # Descripción del proyecto
-│       └── versions/                   # Release notes por versión
-│           ├── 1.0.0.md
-│           ├── 1.0.1.md
-│           └── ...
-├── CHANGELOG.md
-├── README.md
-├── graphify-out/                       # Knowledge Graph (generado por Graphify). Versionado en GitLab.
-│   ├── graph.html
-│   ├── GRAPH_REPORT.md
-│   └── graph.json
-└── .gitlab-ci.yml                      # CI/CD: publica código limpio a main para mirror a GitHub
+info_tab/                       # Carpeta organizativa (sin .git)
+└── 26.1.2/                     # Repositorio real
+    ├── build.gradle            # Build con net.neoforged.moddev
+    ├── gradle.properties       # mod_id, mod_version, mod_group_id...
+    ├── settings.gradle
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/com/skd/infotab/  # Código fuente del mod
+    │   │   ├── resources/
+    │   │   │   ├── assets/infotab/    # Texturas, shaders, lang, modelos...
+    │   │   │   │   └── icon.png           # Logo del mod (64x64 píxeles, referenciado en neoforge.mods.toml)
+    │   │   │   ├── templates/
+    │   │   │   │   └── META-INF/
+    │   │   │   │       └── neoforge.mods.toml  # Template con placeholders ${...}
+    │   │   │   ├── META-INF/
+    │   │   │   │   └── accesstransformer.cfg
+    │   │   │   ├── infotab.mixins.json
+    │   │   │   ├── infotab.neoforge.mixins.json
+    │   │   │   └── infotab.png        # Logo del mod
+    │   │   └── templates/                 # (alternativa legacy, evitar)
+    │   ├── main/java/...                  # Código fuente
+    ├── libs/                               # Dependencias reales del mod (JARs necesarios para compilar). Versionado.
+    ├── lib_ext/                            # Librerías externas para análisis de la sesión. NO versionado (.gitignore).
+    ├── temp/                               # Archivos temporales. NO versionado (.gitignore).
+    ├── docs/
+    │   ├── WORKFLOW_INFO_TAB_26-1-2.md # Este documento
+    │   └── curseforge/                    # Documentación para publicación en CurseForge
+    │       ├── project_vars.md             # Variables del proyecto (ID, token, versiones)
+    │       ├── project_description.md      # Descripción del proyecto
+    │       └── versions/                   # Release notes por versión
+    │           ├── 1.0.0.md
+    │           ├── 1.0.1.md
+    │           └── ...
+    ├── CHANGELOG.md
+    ├── README.md
+    ├── graphify-out/                       # Knowledge Graph (generado por Graphify). Versionado en GitLab.
+    │   ├── graph.html
+    │   ├── GRAPH_REPORT.md
+    │   └── graph.json
+    └── .gitlab-ci.yml                      # CI/CD: publica código limpio a main para mirror a GitHub
 ```
 
 ### Archivos de CurseForge
