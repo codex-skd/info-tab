@@ -1,6 +1,6 @@
 # Flujo de trabajo — Info TAB (NeoForge)
 
-> **Versión del workflow**: 1.4.0 (codex-docs)
+> **Versión del workflow**: 1.5.0 (codex-docs)
 > Este archivo pertenece al proyecto **Info TAB**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -35,35 +35,42 @@ Reglas:
 Todos los mods siguen esta estructura en el directorio raíz (`Mods_Minecraft/`), tengan una o varias versiones de Minecraft:
 
 ```
-<mod_id>/                    # Carpeta padre del mod (solo organizativa, sin .git)
-└── <minecraft_version>/     # Proyecto real con su propio .git y repositorio GitLab
-    ├── .git/
-    ├── build.gradle
-    ├── gradle.properties
+teleport_animation/          # Único repositorio Git (un solo .git/)
+├── 1.21.1/                  # Solo existe en su rama: minecraft/1.21.1/neoforge-21.1/production
+│   ├── src/
+│   ├── docs/
+│   └── ...
+└── 26.1.2/                  # Solo existe en su rama: minecraft/26.1.2/neoforge-26.1.2/production
     ├── src/
     ├── docs/
     └── ...
 ```
 
-Ejemplo para este mod:
+Cada versión de Minecraft es una **rama** dentro del mismo repositorio. La carpeta de cada versión **solo existe en su propia rama** — no hay rastro de otras versiones al cambiar de rama.
+
+Ejemplo real actual:
 
 ```
-info_tab/                    # Mod padre (organizativo, sin .git)
-└── 26.1.2/                  # Repositorio independiente en GitLab
-    ├── .git/
+teleport_animation/          # Un solo repositorio Git
+├── 1.21.1/                  # Rama: minecraft/1.21.1/neoforge-21.1/production
+│   ├── gradle.properties → minecraft_version=1.21.1
+│   └── ...
+└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2/production
     ├── gradle.properties → minecraft_version=26.1.2
-    ├── build.gradle
-    ├── src/
-    ├── docs/
+    └── ...
+
+info_tab/
+└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2/production
     └── ...
 ```
 
 **Reglas:**
-- La carpeta padre `<mod_id>/` es solo organizativa, **no tiene `.git`**
-- Cada `<minecraft_version>/` tiene su propio `.git/` y es un repositorio independiente en GitLab
+- `mod_id/` es el repositorio Git, contiene el `.git/`
+- Cada `<minecraft_version>/` es una subcarpeta **sin `.git/` propio**
+- Cada versión tiene su propia rama `minecraft/<mc-version>/neoforge-<neo-version>/production`
+- Cada rama solo contiene los archivos de su versión. Las carpetas de otras versiones **no existen** en esa rama
 - El `mod_id` en `gradle.properties` debe coincidir con la carpeta padre
-- La rama default del repo es `minecraft/<mc-version>/neoforge-<neo-version>/production`
-- El nombre del workflow sigue el patrón `WORKFLOW_<MOD_ID>_<MC-VERSION>.md` (ej: `WORKFLOW_INFO_TAB_26-1-2.md`)
+- El nombre del workflow sigue el patrón `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`
 
 ## Tipografía
 
@@ -76,8 +83,9 @@ info_tab/                    # Mod padre (organizativo, sin .git)
 ## Estructura del proyecto
 
 ```
-info_tab/                       # Carpeta organizativa (sin .git)
-└── 26.1.2/                     # Repositorio real
+info_tab/                       # Repositorio Git (contiene .git/)
+├── .git/
+└── 26.1.2/                     # Versión actual: minecraft/26.1.2/neoforge-26.1.2.76/production
     ├── build.gradle            # Build con net.neoforged.moddev
     ├── gradle.properties       # mod_id, mod_version, mod_group_id...
     ├── settings.gradle
@@ -662,8 +670,8 @@ El código, los logs y los commits siguen el estándar internacional de programa
 
 | Versión | Fecha | Cambios |
 |---|---|---|
+| 1.5.0 | 2026-07-23 | Workspace: `.git/` en `<mod_id>/`, versiones como subcarpetas, cada una en su rama |
 | 1.4.0 | 2026-07-23 | Organización en workspace: todos los mods usan `<mod_id>/<mc-version>/` tengan 1 o N versiones |
-| 1.3.0 | 2026-07-23 | Nueva sección: organización multi-versión con estructura `<mod_id>/<mc-version>/` |
 | 1.2.7 | 2026-07-23 | Versión actual del genérico |
 | 1.2.6 | 2026-07-23 | Fix YAML en CI: `|| (&&)` reemplazado por bloque `if` para evitar error de sintaxis |
 | 1.2.5 | 2026-07-23 | `*/main` es ahora la rama por defecto, `main` raíz eliminada |
