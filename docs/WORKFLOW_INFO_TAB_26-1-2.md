@@ -1,6 +1,6 @@
 # Flujo de trabajo — Info TAB (NeoForge)
 
-> **Versión del workflow**: 1.5.0 (codex-docs)
+> **Versión del workflow**: 1.6.0 (codex-docs)
 > Este archivo pertenece al proyecto **Info TAB**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -35,41 +35,42 @@ Reglas:
 Todos los mods siguen esta estructura en el directorio raíz (`Mods_Minecraft/`), tengan una o varias versiones de Minecraft:
 
 ```
-teleport_animation/          # Único repositorio Git (un solo .git/)
-├── 1.21.1/                  # Solo existe en su rama: minecraft/1.21.1/neoforge-21.1/production
+<mod_id>/                    # Carpeta padre organizativa (sin .git)
+├── <minecraft_version>/     # Repositorio independiente con su propio .git
+│   ├── .git/
+│   ├── build.gradle
+│   ├── gradle.properties
 │   ├── src/
 │   ├── docs/
 │   └── ...
-└── 26.1.2/                  # Solo existe en su rama: minecraft/26.1.2/neoforge-26.1.2/production
-    ├── src/
-    ├── docs/
+└── <minecraft_version>/
+    ├── .git/
     └── ...
 ```
 
-Cada versión de Minecraft es una **rama** dentro del mismo repositorio. La carpeta de cada versión **solo existe en su propia rama** — no hay rastro de otras versiones al cambiar de rama.
+Cada versión de Minecraft es un **repositorio independiente** con su propio `.git/`. Así puedes tener todas las versiones en local simultáneamente sin cambiar de rama.
 
 Ejemplo real actual:
 
 ```
-teleport_animation/          # Un solo repositorio Git
-├── 1.21.1/                  # Rama: minecraft/1.21.1/neoforge-21.1/production
+teleport_animation/          # Carpeta organizativa, sin .git
+├── 1.21.1/                  # Repositorio independiente (.git aquí)
 │   ├── gradle.properties → minecraft_version=1.21.1
 │   └── ...
-└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2/production
+└── 26.1.2/                  # Repositorio independiente (.git aquí)
     ├── gradle.properties → minecraft_version=26.1.2
     └── ...
 
-info_tab/
-└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2/production
+info_tab/                    # Carpeta organizativa, sin .git
+└── 26.1.2/                  # Repositorio independiente (.git aquí)
     └── ...
 ```
 
 **Reglas:**
-- `mod_id/` es el repositorio Git, contiene el `.git/`
-- Cada `<minecraft_version>/` es una subcarpeta **sin `.git/` propio**
-- Cada versión tiene su propia rama `minecraft/<mc-version>/neoforge-<neo-version>/production`
-- Cada rama solo contiene los archivos de su versión. Las carpetas de otras versiones **no existen** en esa rama
+- `mod_id/` es una carpeta organizativa, **no contiene `.git/`**
+- Cada `<minecraft_version>/` tiene su propio `.git/` y es un repositorio independiente
 - El `mod_id` en `gradle.properties` debe coincidir con la carpeta padre
+- La rama default del repositorio es `minecraft/<mc-version>/neoforge-<neo-version>/production`
 - El nombre del workflow sigue el patrón `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`
 
 ## Tipografía
@@ -83,9 +84,9 @@ info_tab/
 ## Estructura del proyecto
 
 ```
-info_tab/                       # Repositorio Git (contiene .git/)
-├── .git/
-└── 26.1.2/                     # Versión actual: minecraft/26.1.2/neoforge-26.1.2.76/production
+info_tab/                       # Carpeta organizativa (sin .git)
+└── 26.1.2/                     # Repositorio independiente
+    ├── .git/
     ├── build.gradle            # Build con net.neoforged.moddev
     ├── gradle.properties       # mod_id, mod_version, mod_group_id...
     ├── settings.gradle
