@@ -32,13 +32,20 @@ public class AfkTracker {
         long timeout = Config.AFK_TIMEOUT_MINUTES.get() * 60_000L;
         long elapsed = System.currentTimeMillis() - last;
         boolean afk = elapsed > timeout;
+        boolean changed = false;
         if (afk && !afkStatus.containsKey(player)) {
             afkStatus.put(player, true);
             LOGGER.info("[AFK] {} is now AFK ({} min inactive)", player.getName().getString(), Config.AFK_TIMEOUT_MINUTES.get());
+            changed = true;
         }
         if (!afk && afkStatus.containsKey(player)) {
             afkStatus.remove(player);
             LOGGER.info("[AFK] {} is no longer AFK (activity detected)", player.getName().getString());
+            changed = true;
+        }
+        if (changed) {
+            player.refreshDisplayName();
+            player.refreshTabListName();
         }
         return afk;
     }
@@ -48,6 +55,8 @@ public class AfkTracker {
         lastPosition.put(player, player.position());
         if (afkStatus.remove(player) != null) {
             LOGGER.info("[AFK] {} is back from AFK", player.getName().getString());
+            player.refreshDisplayName();
+            player.refreshTabListName();
         }
     }
 
@@ -71,6 +80,8 @@ public class AfkTracker {
                     lastPosition.put(player, currentPos);
                     if (afkStatus.remove(player) != null) {
                         LOGGER.info("[AFK] {} moved, activity reset", player.getName().getString());
+                        player.refreshDisplayName();
+                        player.refreshTabListName();
                     }
                 } else if (oldPos == null) {
                     lastPosition.put(player, currentPos);

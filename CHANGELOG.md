@@ -1,3 +1,8 @@
+## [1.0.2-beta.8] - 2026-07-28
+
+### Fixed
+- [AFK] prefix not appearing in tab list: refreshTabListName() is now called when AFK status changes
+
 ## [1.0.2-beta.7] - 2026-07-26
 
 ### Fixed
