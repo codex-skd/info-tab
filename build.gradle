@@ -24,6 +24,12 @@ sourceSets.main.resources {
     // Exclude common development only resources from finalized outputs
     exclude("**/*.bbmodel") // BlockBench project files
     exclude("src/generated/**/.cache") // datagen cache files
+    // The raw templates/ folder is only a source for generateModMetadata (see below);
+    // without this exclude, the unresolved template (with ${...} placeholders) also
+    // gets copied as-is into the jar under templates/META-INF/, alongside the resolved
+    // META-INF/neoforge.mods.toml — an unexpected top-level folder that is not part of
+    // the mod's structure.
+    exclude("templates/**")
 }
 
 repositories {

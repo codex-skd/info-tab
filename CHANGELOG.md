@@ -1,3 +1,9 @@
+## [1.0.4] - 2026-07-28
+
+### Fixed
+- `1.0.3` was rejected by CurseForge ("Failed to verify archive"). Root cause: the raw `templates/META-INF/neoforge.mods.toml` (unresolved `${...}` placeholders) was being copied as-is into the jar under an extra `templates/` top-level folder, alongside the real resolved `META-INF/neoforge.mods.toml`. Excluded `templates/**` from the final jar in `build.gradle`.
+- Cleaned up leftover references to the mod's old name ("Dimension TAB", `/dimensiontab` command) in `pack.mcmeta` and the mods.toml description — the mod was renamed to Info TAB (`/infotab`) in 1.0.2-beta.1 but these were never updated.
+
 ## [1.0.3] - 2026-07-28
 
 ### Changed
