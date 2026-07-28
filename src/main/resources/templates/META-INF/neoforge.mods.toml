@@ -15,7 +15,8 @@ Features:
 - Customizable colors per dimension (Overworld, Nether, End, modded)
 - Dimension aliases (custom names)
 - Configurable display format and position (prepend/append)
-- In-game commands for runtime configuration: /dimensiontab
+- [AFK] tag for inactive players, in the tab list and above their head
+- In-game commands for runtime configuration: /infotab
 '''
 
 displayTest="IGNORE_SERVER_VERSION"
