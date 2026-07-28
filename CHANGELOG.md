@@ -1,3 +1,8 @@
+## [1.0.3] - 2026-07-28
+
+### Changed
+- Re-published as 1.0.3: the 1.0.2 CurseForge upload was rejected after repeated failed attempts caused by a broken upload script (see below); no code changes since 1.0.2
+
 ## [1.0.2] - 2026-07-28
 
 ### Fixed
