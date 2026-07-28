@@ -1,3 +1,8 @@
+## [1.0.2] - 2026-07-28
+
+### Fixed
+- `[AFK]` prefix now also shows on the floating nametag rendered above the player's head (previously it only appeared in the tab list)
+
 ## [1.0.2-beta.8] - 2026-07-28
 
 ### Fixed
