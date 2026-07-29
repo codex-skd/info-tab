@@ -1,3 +1,11 @@
+## [1.0.5] - 2026-07-29
+
+### Added
+- AFK status now also resets on mouse look, mouse clicks, or key presses while playing (no GUI open), not just world interactions or movement. Uses a new lightweight client→server ping packet (`infotab:activity_ping`), throttled to at most once every 3 seconds.
+
+### Removed
+- Debug logging added during AFK development (tracking start, status changes, movement, countdown warnings, config reload) — no longer needed now that the feature is stable.
+
 ## [1.0.4] - 2026-07-28
 
 ### Fixed

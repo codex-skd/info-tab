@@ -1,6 +1,6 @@
 package com.skd.infotab;
 
-import com.mojang.logging.LogUtils;
+import com.skd.infotab.network.ActivityPingPacket;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -13,21 +13,31 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import org.slf4j.Logger;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 
 @Mod(InfoTab.MODID)
 public class InfoTab {
 
     public static final String MODID = "infotab";
-    public static final Logger LOGGER = LogUtils.getLogger();
 
     private static final PlayerListHandler HANDLER = new PlayerListHandlerNeoForge();
 
     public InfoTab(IEventBus modEventBus, ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modEventBus.addListener(this::registerPackets);
+    }
+
+    private void registerPackets(RegisterPayloadHandlersEvent event) {
+        var registrar = event.registrar("1");
+        registrar.playToServer(ActivityPingPacket.TYPE, ActivityPingPacket.STREAM_CODEC, (payload, context) -> {
+            context.enqueueWork(() -> {
+                if (context.player() instanceof ServerPlayer sp) {
+                    AfkTracker.updateActivity(sp);
+                }
+            });
+        });
     }
 
     @EventBusSubscriber(modid = MODID)
@@ -101,17 +111,6 @@ public class InfoTab {
             event.getEntity().refreshDisplayName();
             if (event.getEntity() instanceof ServerPlayer sp) {
                 sp.refreshTabListName();
-            }
-        }
-    }
-
-    @EventBusSubscriber(modid = MODID)
-    public static class ModEventBusEvents {
-
-        @SubscribeEvent
-        public static void onConfigReloading(ModConfigEvent.Reloading event) {
-            if (event.getConfig().getType() == ModConfig.Type.COMMON && event.getConfig().getModId().equals(MODID)) {
-                LOGGER.info("Info TAB config reloaded");
             }
         }
     }

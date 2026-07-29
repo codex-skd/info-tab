@@ -19,14 +19,12 @@ public class AfkTracker {
     private static final Map<ServerPlayer, Vec3> lastPosition = new ConcurrentHashMap<>();
     private static final Map<ServerPlayer, Boolean> afkStatus = new ConcurrentHashMap<>();
     private static int tickCounter = 0;
-    private static final org.slf4j.Logger LOGGER = com.mojang.logging.LogUtils.getLogger();
 
     public static boolean isAfk(ServerPlayer player) {
         Long last = lastActivity.get(player);
         if (last == null) {
             lastActivity.put(player, System.currentTimeMillis());
             lastPosition.put(player, player.position());
-            LOGGER.info("[AFK] Tracking started for {}", player.getName().getString());
             return false;
         }
         long timeout = Config.AFK_TIMEOUT_MINUTES.get() * 60_000L;
@@ -35,12 +33,10 @@ public class AfkTracker {
         boolean changed = false;
         if (afk && !afkStatus.containsKey(player)) {
             afkStatus.put(player, true);
-            LOGGER.info("[AFK] {} is now AFK ({} min inactive)", player.getName().getString(), Config.AFK_TIMEOUT_MINUTES.get());
             changed = true;
         }
         if (!afk && afkStatus.containsKey(player)) {
             afkStatus.remove(player);
-            LOGGER.info("[AFK] {} is no longer AFK (activity detected)", player.getName().getString());
             changed = true;
         }
         if (changed) {
@@ -54,7 +50,6 @@ public class AfkTracker {
         lastActivity.put(player, System.currentTimeMillis());
         lastPosition.put(player, player.position());
         if (afkStatus.remove(player) != null) {
-            LOGGER.info("[AFK] {} is back from AFK", player.getName().getString());
             player.refreshDisplayName();
             player.refreshTabListName();
         }
@@ -79,29 +74,13 @@ public class AfkTracker {
                     lastActivity.put(player, System.currentTimeMillis());
                     lastPosition.put(player, currentPos);
                     if (afkStatus.remove(player) != null) {
-                        LOGGER.info("[AFK] {} moved, activity reset", player.getName().getString());
                         player.refreshDisplayName();
                         player.refreshTabListName();
                     }
                 } else if (oldPos == null) {
                     lastPosition.put(player, currentPos);
                 }
-                // Evaluate AFK status so the log fires even without TabListNameFormat
                 isAfk(sp);
-            }
-        }
-        // Every 30 seconds (600 ticks): log countdown for players approaching AFK
-        if (tickCounter % 600 == 0) {
-            int timeout = Config.AFK_TIMEOUT_MINUTES.get();
-            for (var player : event.getServer().getPlayerList().getPlayers()) {
-                Long last = lastActivity.get(player);
-                if (last != null && !afkStatus.containsKey(player)) {
-                    long elapsed = System.currentTimeMillis() - last;
-                    int remaining = timeout - (int)(elapsed / 60_000);
-                    if (remaining > 0 && remaining <= 5) {
-                        LOGGER.info("[AFK] {} will be AFK in ~{} min", player.getName().getString(), remaining);
-                    }
-                }
             }
         }
     }
