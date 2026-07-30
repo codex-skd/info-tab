@@ -95,8 +95,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785435385.093578,
-    "ast_hash": "e4f3654d7f5a9ac5f3a8ca6c0c677760",
+    "mtime": 1785452648.7460122,
+    "ast_hash": "838dd6420f8225e59efd46f60d605975",
     "semantic_hash": ""
   },
   "README.md": {
@@ -152,6 +152,11 @@
   "src/main/resources/info_tab.png": {
     "mtime": 1785408036.9411194,
     "ast_hash": "33cb92ad588c3a6f08bc2e3d7aa009da",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.3.md": {
+    "mtime": 1785452653.7654657,
+    "ast_hash": "b498185ca65ced22b991a11f21aea319",
     "semantic_hash": ""
   }
 }

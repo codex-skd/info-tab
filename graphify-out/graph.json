@@ -2140,10 +2140,30 @@
       "norm_label": "changelog"
     },
     {
-      "label": "[0.0.0-beta.2] - 2026-07-30",
+      "label": "[0.0.0-beta.3] - 2026-07-31",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L10",
+      "_origin": "ast",
+      "id": "changelog_0_0_0_beta_3_2026_07_31",
+      "community": 13,
+      "norm_label": "[0.0.0-beta.3] - 2026-07-31"
+    },
+    {
+      "label": "Fixed",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "changelog_fixed",
+      "community": 13,
+      "norm_label": "fixed"
+    },
+    {
+      "label": "[0.0.0-beta.2] - 2026-07-30",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_2_2026_07_30",
       "community": 13,
@@ -2153,7 +2173,7 @@
       "label": "Changed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L12",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "changelog_changed",
       "community": 13,
@@ -2163,7 +2183,7 @@
       "label": "[0.0.0-beta.1] - 2026-07-30",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L15",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_1_2026_07_30",
       "community": 13,
@@ -2173,7 +2193,7 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L17",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "changelog_added",
       "community": 13,
@@ -2748,6 +2768,16 @@
       "id": "docs_curseforge_versions_0_0_0_beta_2",
       "community": 21,
       "norm_label": "0.0.0-beta.2.md"
+    },
+    {
+      "label": "0.0.0-beta.3.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/0.0.0-beta.3.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_0_0_0_beta_3",
+      "community": 22,
+      "norm_label": "0.0.0-beta.3.md"
     }
   ],
   "links": [
@@ -6806,7 +6836,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L15",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_0_0_0_beta_1_2026_07_30",
@@ -6816,7 +6846,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_0_0_0_beta_2_2026_07_30",
@@ -6826,7 +6856,27 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_0_0_0_beta_3_2026_07_31",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
       "source_location": "L12",
+      "weight": 1.0,
+      "source": "changelog_0_0_0_beta_3_2026_07_31",
+      "target": "changelog_fixed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_2_2026_07_30",
       "target": "changelog_changed",
@@ -6836,7 +6886,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L17",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_1_2026_07_30",
       "target": "changelog_added",
@@ -7354,5 +7404,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "002d323206819c813f680b9577e412ef1cf62bc4"
+  "built_at_commit": "fe8bc2b21a1717a61b28158c1375c62e5bcc6577"
 }
