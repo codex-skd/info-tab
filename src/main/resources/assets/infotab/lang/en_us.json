@@ -1,0 +1,24 @@
+{
+  "itemGroup.infotab": "Info TAB",
+
+  "infotab.configuration.title": "Info TAB Config",
+  "infotab.configuration.section.infotab.common.toml": "Info TAB Common Config",
+  "infotab.configuration.section.infotab.common.toml.title": "Info TAB Config",
+  "infotab.configuration.general": "General Configuration",
+  "infotab.configuration.customization": "Customization",
+  "infotab.configuration.listFormat": "Display Format",
+  "infotab.configuration.dimPosition": "Dimension Tag Position",
+  "infotab.configuration.enableAliases": "Enable Dimension Aliases",
+  "infotab.configuration.dimensionColors": "Dimension Colors",
+  "infotab.configuration.perDimColor": "Per-Dimension Colors",
+  "infotab.configuration.defaultColor": "Default Color",
+  "infotab.configuration.overworldColor": "Overworld Color",
+  "infotab.configuration.netherColor": "Nether Color",
+  "infotab.configuration.endColor": "End Color",
+  "infotab.configuration.moddedDimensions": "Modded Dimensions",
+  "infotab.configuration.dimAliases": "Dimension Aliases",
+  "infotab.configuration.extra": "Extra Settings",
+  "infotab.configuration.customColors": "Custom Dimension Colors",
+  "infotab.configuration.showAfk": "Show AFK Status",
+  "infotab.configuration.showDimension": "Show Dimension"
+}
