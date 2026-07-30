@@ -20,7 +20,7 @@ import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 @Mod(InfoTab.MODID)
 public class InfoTab {
 
-    public static final String MODID = "infotab";
+    public static final String MODID = "info_tab";
 
     private static final PlayerListHandler HANDLER = new PlayerListHandlerNeoForge();
 

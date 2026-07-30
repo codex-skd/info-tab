@@ -40,9 +40,6 @@ repo/
 !**/src/**/repo/
 lib_ext/
 
-### Tools ###
-graphify-out/
-
 ### Temp ###
 temp/
 # Graphify - solo el snapshot actual, sin copias fechadas

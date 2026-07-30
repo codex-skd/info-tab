@@ -1,3 +1,10 @@
+## [1.0.6] - 2026-07-30
+
+### Changed
+- **Breaking**: `mod_id` normalized from `infotab` to `info_tab` to match the project folder name, per the workspace's standard naming convention. This changes the mod's internal identifier — the network channel is now `info_tab:activity_ping`, the config file name, the asset namespace (`assets/info_tab/`), and the generated JAR name (`info_tab-26.1.2-neoforge-<version>.jar`). The `/infotab` command and the Java package (`com.skd.infotab`) are unchanged. Existing per-world/server saved config under the old `infotab` id will not carry over automatically.
+- Workflow doc synced to `codex-docs/WORKFLOW_GENERIC.md` v1.12.0.
+- `graphify-out/` is now versioned in git (was incorrectly excluded via `.gitignore`), per the generic workflow.
+
 ## [1.0.5] - 2026-07-29
 
 ### Added
