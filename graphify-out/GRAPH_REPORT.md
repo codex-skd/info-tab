@@ -1,16 +1,16 @@
 # Graph Report - 26.2  (2026-07-30)
 
 ## Corpus Check
-- 27 files · ~81,566 words
+- 28 files · ~81,665 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 270 nodes · 434 edges · 21 communities (19 shown, 2 thin omitted)
+- 273 nodes · 436 edges · 22 communities (20 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1193d771`
+- Built from commit: `002d3232`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -60,7 +60,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (21 total, 2 thin omitted)
+## Communities (22 total, 2 thin omitted)
 
 ### Community 0 - "Flujo de trabajo — Info TAB (NeoForge)"
 Cohesion: 0.06
@@ -111,8 +111,8 @@ Cohesion: 0.60
 Nodes (3): InfoTabClient, Mod, ModContainer
 
 ### Community 13 - "[0.0.0-beta.1] - 2026-07-30"
-Cohesion: 0.50
-Nodes (3): [0.0.0-beta.1] - 2026-07-30, Added, Changelog
+Cohesion: 0.33
+Nodes (5): [0.0.0-beta.1] - 2026-07-30, [0.0.0-beta.2] - 2026-07-30, Added, Changed, Changelog
 
 ### Community 14 - "CLAUDE.md — info_tab (26.2)"
 Cohesion: 0.50
@@ -123,7 +123,7 @@ Cohesion: 0.83
 Nodes (3): gradlew script, die(), warn()
 
 ## Knowledge Gaps
-- **45 isolated node(s):** `PREPEND`, `APPEND`, `Paso 0 obligatorio`, `Prioridad de instrucciones`, `Added` (+40 more)
+- **46 isolated node(s):** `PREPEND`, `APPEND`, `Paso 0 obligatorio`, `Prioridad de instrucciones`, `Changed` (+41 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -131,13 +131,13 @@ Nodes (3): gradlew script, die(), warn()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `IConfigHelper` connect `IConfigHelper` to `NeoForgeConfigHelper`?**
-  _High betweenness centrality (0.138) - this node is a cross-community bridge._
+  _High betweenness centrality (0.135) - this node is a cross-community bridge._
 - **Why does `NeoForgeConfigHelper` connect `NeoForgeConfigHelper` to `IConfigHelper`?**
-  _High betweenness centrality (0.109) - this node is a cross-community bridge._
+  _High betweenness centrality (0.106) - this node is a cross-community bridge._
 - **Why does `PlayerListHandler` connect `PlayerListHandler` to `NeoForgeConfigHelper`, `InfoTab.java`?**
-  _High betweenness centrality (0.070) - this node is a cross-community bridge._
+  _High betweenness centrality (0.068) - this node is a cross-community bridge._
 - **What connects `PREPEND`, `APPEND`, `Paso 0 obligatorio` to the rest of the system?**
-  _45 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _46 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Flujo de trabajo — Info TAB (NeoForge)` be split into smaller, more focused modules?**
   _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
 - **Should `IConfigHelper` be split into smaller, more focused modules?**

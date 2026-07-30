@@ -45,8 +45,8 @@
     "semantic_hash": ""
   },
   "src/main/java/com/skd/infotab/InfoTab.java": {
-    "mtime": 1785432398.6907601,
-    "ast_hash": "c5aec2b2798200fc651bc335cf09867c",
+    "mtime": 1785435337.6179266,
+    "ast_hash": "79fa7214f4461e7e34427c6ac7e7d5c8",
     "semantic_hash": ""
   },
   "src/main/java/com/skd/infotab/InfoTabClient.java": {
@@ -84,21 +84,6 @@
     "ast_hash": "82e7e098d4039777510c4586895a7d89",
     "semantic_hash": ""
   },
-  "src/main/resources/assets/infotab/lang/en_us.json": {
-    "mtime": 1785408036.8472672,
-    "ast_hash": "ea7068888bff81ec75b0bf5f11178a15",
-    "semantic_hash": ""
-  },
-  "src/main/resources/infotab.mixins.json": {
-    "mtime": 1785408036.9701273,
-    "ast_hash": "fbe58fb2ab9deff199f860627a10bb15",
-    "semantic_hash": ""
-  },
-  "src/main/resources/infotab.neoforge.mixins.json": {
-    "mtime": 1785408037.000628,
-    "ast_hash": "b06329a8ae8b9b3f2775c018a970cf2a",
-    "semantic_hash": ""
-  },
   ".claude/CLAUDE.md": {
     "mtime": 1785408108.83597,
     "ast_hash": "8b0c1675ba4394cc5d47150e0a3b1466",
@@ -110,8 +95,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1785408178.5484488,
-    "ast_hash": "cd3b8aa4668121cb0ace3c496be2e433",
+    "mtime": 1785435385.093578,
+    "ast_hash": "e4f3654d7f5a9ac5f3a8ca6c0c677760",
     "semantic_hash": ""
   },
   "README.md": {
@@ -139,12 +124,32 @@
     "ast_hash": "bec8e9ca277fa697840baf31abb923ec",
     "semantic_hash": ""
   },
-  "src/main/resources/assets/infotab/icon.png": {
+  "src/main/resources/assets/info_tab/lang/en_us.json": {
+    "mtime": 1785435358.6634455,
+    "ast_hash": "cdeeb001b1d2cfce657339002a81d79b",
+    "semantic_hash": ""
+  },
+  "src/main/resources/info_tab.mixins.json": {
+    "mtime": 1785408036.9701273,
+    "ast_hash": "fbe58fb2ab9deff199f860627a10bb15",
+    "semantic_hash": ""
+  },
+  "src/main/resources/info_tab.neoforge.mixins.json": {
+    "mtime": 1785408037.000628,
+    "ast_hash": "b06329a8ae8b9b3f2775c018a970cf2a",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.2.md": {
+    "mtime": 1785435388.7879443,
+    "ast_hash": "eb14a299d9cb1f8be56b93f7773203c3",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/info_tab/icon.png": {
     "mtime": 1785408036.8931587,
     "ast_hash": "33cb92ad588c3a6f08bc2e3d7aa009da",
     "semantic_hash": ""
   },
-  "src/main/resources/infotab.png": {
+  "src/main/resources/info_tab.png": {
     "mtime": 1785408036.9411194,
     "ast_hash": "33cb92ad588c3a6f08bc2e3d7aa009da",
     "semantic_hash": ""
