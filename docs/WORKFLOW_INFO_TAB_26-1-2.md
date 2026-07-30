@@ -1,6 +1,6 @@
 # Flujo de trabajo — Info TAB (NeoForge)
 
-> **Versión del workflow**: 1.6.0 (codex-docs)
+> **Versión del workflow**: 1.12.0 (codex-docs)
 > Este archivo pertenece al proyecto **Info TAB**. Cada proyecto tiene su propio `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`.
 > No es un archivo central ni template compartido. Los cambios aquí solo afectan a este proyecto.
 > Para actualizar este workflow, revisar la última versión en `codex-docs/WORKFLOW_GENERIC.md`.
@@ -9,16 +9,16 @@
 
 | Convención | Uso | Ejemplo |
 |---|---|---|
-| **snake_case** | `mod_id` en gradle.properties, assets/, packages Java | `infotab` |
-| **PascalCase** | Clases Java principales | `InfoTab` |
-| **camelCase** | Variables, métodos, config keys | `infoTab` |
-| **Title Case** | Display name en README, CHANGELOG, docs, CurseForge | `Info TAB` |
+| **snake_case** | `mod_id` en gradle.properties, assets/, packages Java | `ageforged_armor` |
+| **PascalCase** | Clases Java principales | `AgeforgedArmor` |
+| **camelCase** | Variables, métodos, config keys | `ageforgedArmor` |
+| **Title Case** | Display name en README, CHANGELOG, docs, CurseForge | `Ageforged Armor` |
 
 ### Ficheros de documentación
 
 | Fichero | Formato | Ejemplo |
 |---|---|---|
-| WORKFLOW | `WORKFLOW_<MOD_ID>_<MC-VERSION>.md` | `WORKFLOW_INFO_TAB_26-1-2.md` |
+| WORKFLOW | `WORKFLOW_<MOD_ID>_<MC-VERSION>.md` | `WORKFLOW_TELEPORT_ANIMATION_1-21-1.md` |
 | CHANGELOG | `CHANGELOG.md` (fijo) | `CHANGELOG.md` |
 | README | `README.md` (fijo) | `README.md` |
 
@@ -27,50 +27,39 @@
 Reglas:
 - `mod_id` en `gradle.properties` debe coincidir con el nombre del directorio del proyecto
 - El display name en `README.md` y `CHANGELOG.md` debe estar en **Title Case**
-- Las clases Java principales deben seguir el naming del `mod_id` pero en **PascalCase**
-- Las config keys en camelCase: `infoTab.enableFeature`
+- Las clases Java principales deben seguir el naming del `mod_id` pero en **PascalCase**:
+  - `ageforged_armor` → clase `AgeforgedArmor`, no `Ageforged_armor` ni `AgeforgedArmorMod`
+  - `armor_cosmetic` → clase `ArmorCosmetic`, no `Armor_cosmetic`
+  - `carry_mechanics` → clase `CarryMechanics`, no `Carrymechanics`
+  - `dinamyc_combat` → clase `DinamycCombat` (respetando el mod_id existente)
+- Las config keys en camelCase: `ageforgedArmor.enableFeature`
 
 ## Organización en el workspace
 
-Todos los mods siguen esta estructura en el directorio raíz (`Mods_Minecraft/`), tengan una o varias versiones de Minecraft:
-
-```
-<mod_id>/                    # Carpeta padre organizativa (sin .git)
-├── <minecraft_version>/     # Repositorio independiente con su propio .git
-│   ├── .git/
-│   ├── build.gradle
-│   ├── gradle.properties
-│   ├── src/
-│   ├── docs/
-│   └── ...
-└── <minecraft_version>/
-    ├── .git/
-    └── ...
-```
-
-Cada versión de Minecraft es un **repositorio independiente** con su propio `.git/`. Así puedes tener todas las versiones en local simultáneamente sin cambiar de rama.
+Todos los mods siguen esta estructura en el directorio raíz (`Mods_Minecraft/`), tengan una o varias versiones de Minecraft: **un repositorio Git por mod**, con **una rama por versión de Minecraft** (par `production`/`main` cada una, ver [Ramas](#ramas)).
 
 Ejemplo real actual:
 
 ```
-teleport_animation/          # Carpeta organizativa, sin .git
-├── 1.21.1/                  # Repositorio independiente (.git aquí)
+teleport_animation/          # Un solo repositorio Git
+├── 1.21.1/                  # Rama: minecraft/1.21.1/neoforge-21.1/production
 │   ├── gradle.properties → minecraft_version=1.21.1
 │   └── ...
-└── 26.1.2/                  # Repositorio independiente (.git aquí)
+└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2/production
     ├── gradle.properties → minecraft_version=26.1.2
     └── ...
 
-info_tab/                    # Carpeta organizativa, sin .git
-└── 26.1.2/                  # Repositorio independiente (.git aquí)
+info_tab/
+└── 26.1.2/                  # Rama: minecraft/26.1.2/neoforge-26.1.2/production
     └── ...
 ```
 
 **Reglas:**
-- `mod_id/` es una carpeta organizativa, **no contiene `.git/`**
-- Cada `<minecraft_version>/` tiene su propio `.git/` y es un repositorio independiente
+- `mod_id/` es el repositorio Git, contiene el `.git/`
+- Cada `<minecraft_version>/` es una subcarpeta **sin `.git/` propio**
+- Cada versión tiene su propia rama `minecraft/<mc-version>/neoforge-<neo-version>/production`
+- Cada rama solo contiene los archivos de su versión. Las carpetas de otras versiones **no existen** en esa rama
 - El `mod_id` en `gradle.properties` debe coincidir con la carpeta padre
-- La rama default del repositorio es `minecraft/<mc-version>/neoforge-<neo-version>/production`
 - El nombre del workflow sigue el patrón `WORKFLOW_<MOD_ID>_<MC-VERSION>.md`
 
 ## Tipografía
@@ -84,47 +73,45 @@ info_tab/                    # Carpeta organizativa, sin .git
 ## Estructura del proyecto
 
 ```
-info_tab/                       # Carpeta organizativa (sin .git)
-└── 26.1.2/                     # Repositorio independiente
-    ├── .git/
-    ├── build.gradle            # Build con net.neoforged.moddev
-    ├── gradle.properties       # mod_id, mod_version, mod_group_id...
-    ├── settings.gradle
-    ├── src/
-    │   ├── main/
-    │   │   ├── java/com/skd/infotab/  # Código fuente del mod
-    │   │   ├── resources/
-    │   │   │   ├── assets/infotab/    # Texturas, shaders, lang, modelos...
-    │   │   │   │   └── icon.png           # Logo del mod (64x64 píxeles, referenciado en neoforge.mods.toml)
-    │   │   │   ├── templates/
-    │   │   │   │   └── META-INF/
-    │   │   │   │       └── neoforge.mods.toml  # Template con placeholders ${...}
-    │   │   │   ├── META-INF/
-    │   │   │   │   └── accesstransformer.cfg
-    │   │   │   ├── infotab.mixins.json
-    │   │   │   ├── infotab.neoforge.mixins.json
-    │   │   │   └── infotab.png        # Logo del mod
-    │   │   └── templates/                 # (alternativa legacy, evitar)
-    │   ├── main/java/...                  # Código fuente
-    ├── libs/                               # Dependencias reales del mod (JARs necesarios para compilar). Versionado.
-    ├── lib_ext/                            # Librerías externas para análisis de la sesión. NO versionado (.gitignore).
-    ├── temp/                               # Archivos temporales. NO versionado (.gitignore).
-    ├── docs/
-    │   ├── WORKFLOW_INFO_TAB_26-1-2.md # Este documento
-    │   └── curseforge/                    # Documentación para publicación en CurseForge
-    │       ├── project_vars.md             # Variables del proyecto (ID, token, versiones)
-    │       ├── project_description.md      # Descripción del proyecto
-    │       └── versions/                   # Release notes por versión
-    │           ├── 1.0.0.md
-    │           ├── 1.0.1.md
-    │           └── ...
-    ├── CHANGELOG.md
-    ├── README.md
-    ├── graphify-out/                       # Knowledge Graph (generado por Graphify). Versionado en GitLab.
-    │   ├── graph.html
-    │   ├── GRAPH_REPORT.md
-    │   └── graph.json
-    └── .gitlab-ci.yml                      # CI/CD: publica código limpio a main para mirror a GitHub
+<mod>/
+├── build.gradle                        # Build con net.neoforged.moddev
+├── gradle.properties                   # mod_id, mod_version, mod_group_id...
+├── settings.gradle
+├── src/
+│   ├── main/
+│   │   ├── java/<package>/             # Código fuente del mod
+│   │   ├── resources/
+│   │   │   ├── assets/<mod_id>/        # Texturas, shaders, lang, modelos...
+│   │   │   │   └── icon.png           # Logo del mod (64x64 píxeles, referenciado en neoforge.mods.toml)
+│   │   │   ├── templates/
+│   │   │   │   └── META-INF/
+│   │   │   │       └── neoforge.mods.toml  # Template con placeholders ${...}
+│   │   │   ├── META-INF/
+│   │   │   │   └── accesstransformer.cfg
+│   │   │   ├── <mod_id>.mixins.json
+│   │   │   └── <mod_id>.png           # Logo del mod
+│   │   └── templates/                 # (alternativa legacy, evitar)
+│   │       └── META-INF/
+│   │           └── neoforge.mods.toml
+│   ├── main/java/<package>/...         # Código fuente
+├── libs/                               # Dependencias reales del mod (JARs necesarios para compilar). Versionado.
+├── lib_ext/                            # Librerías externas para análisis de la sesión. NO versionado (.gitignore).
+├── temp/                               # Archivos temporales: investigaciones, prototipos, JARs extraídos, pruebas. NO versionado (.gitignore).
+├── docs/
+│   ├── WORKFLOW_<MOD_ID>_<MC-VERSION>.md  # Este documento (ej: WORKFLOW_TELEPORT_ANIMATION_1-21-1.md)
+│   └── curseforge/                    # Documentación para publicación en CurseForge
+│       ├── project_vars.md             # Variables del proyecto (ID, token, versiones)
+│       ├── project_description.md      # Descripción del proyecto
+│       └── versions/                   # Release notes por versión
+│           ├── 0.0.0-beta.1.md
+│           └── ...
+├── CHANGELOG.md
+├── README.md
+├── graphify-out/                       # Knowledge Graph (generado por Graphify). Versionado en GitLab, NO va a GitHub (excluido por CI).
+│   ├── graph.html
+│   ├── GRAPH_REPORT.md
+│   └── graph.json
+└── .gitlab-ci.yml                      # CI/CD: publica código limpio a main para mirror a GitHub
 ```
 
 ### Archivos de CurseForge
@@ -206,16 +193,16 @@ El changelog se envía en formato **HTML**, no Markdown. Aunque CurseForge acept
 #### Ejemplo de estructura HTML para release notes
 
 ```html
-<h2>v1.0.1 - Documentation and workflow update</h2>
+<h2>v0.0.0-beta.X - Titulo descriptivo</h2>
 
-<h3>Changed</h3>
+<h3>Fix</h3>
 <ul>
-<li>Updated <code>WORKFLOW.md</code> with new branch structure.</li>
+<li><strong>Issue</strong>: description with <code>code</code>.</li>
 </ul>
 
 <h3>Technical Changes</h3>
 <ul>
-<li><code>InfoTab.java</code> — event handler adjustments.</li>
+<li><code>Class.method()</code> — description.</li>
 </ul>
 ```
 
@@ -240,23 +227,36 @@ El changelog se envía en formato **HTML**, no Markdown. Aunque CurseForge acept
 
 | Rama | Propósito |
 |---|---|---|
-| `main` | ~~Eliminar.~~ Ya no existe. La default ahora es `*/production` |
-| `minecraft/26.1.2/neoforge-26.1.2.76/production` | **Rama por defecto**. Rama de trabajo con todo el proyecto: código, docs/, lib_ext/, graphify-out/, tokens reales |
-| `minecraft/26.1.2/neoforge-26.1.2.76/main` | **Rama protegida**. Recibe el mirror a GitHub. Solo contiene código fuente compilable. Se actualiza vía CI/CD con force push |
+| `main` | ~~Eliminar.~~ Ya no existe. La default es la `*/production` de la MC más reciente |
+| `minecraft/<mc-version>/neoforge-<neo-version>/production` | **Rama por defecto** (la de MC más reciente). Rama de trabajo con todo el proyecto: código, docs/, lib_ext/, graphify-out/, tokens reales |
+| `minecraft/<mc-version>/neoforge-<neo-version>/main` | **Rama protegida**. Recibe el mirror a GitHub. Solo contiene código fuente compilable. Se actualiza vía CI/CD con force push |
+
+### Ejemplos
+
+| Rama | Propósito |
+|---|---|
+| `minecraft/1.21.1/neoforge-21.1.78/production` | Trabajo diario en Minecraft 1.21.1 |
+| `minecraft/1.21.1/neoforge-21.1.78/main` | Código público para GitHub (misma versión) |
+| `minecraft/26.1.2/neoforge-21.1.141/production` | Trabajo diario en Minecraft 26.1.2 |
+| `minecraft/26.1.2/neoforge-21.1.141/main` | Código público para GitHub (misma versión) |
 
 ### Esquema de publicación
 
 ```
 GitLab (privado)                         GitHub (público)
 ─────────────────────                    ──────────────────────
-minecraft/26.1.2/neoforge-26.1.2.76/production
-  (código + docs/ + lib_ext/             minecraft/26.1.2/neoforge-26.1.2.76/main
+minecraft/X/N/production
+  (código + docs/ + lib_ext/             minecraft/X/N/main
    + graphify-out/ + tokens)              (solo código + libs/
        │                                   + README + placeholders)
        │  CI/CD: filtra, sanitiza,
        │  commitea con force push
        ▼  a la rama */main hermana
-  minecraft/26.1.2/neoforge-26.1.2.76/main ──→ GitHub
+  minecraft/X/N/main ──────────────────→ minecraft/X/N/main
+       │         (mirror push automático)
+       ▼
+    GitHub: minecraft/X/N/main
+    (espejo exacto de GitLab)
 ```
 
 Cada versión de Minecraft/NeoForge tiene su propio par `production` ↔ `main`. El mirror de GitLab replica **todas** las ramas `*/main` a GitHub automáticamente.
@@ -271,23 +271,23 @@ Cada vez que se crea una rama `production` para una nueva versión, la agente (s
 
 | Rol | Acción |
 |---|---|
-| **Agente (sesión)** | Crear la rama `*/main` desde `*/production` y pushearla |
-| **Operador (desarrollador)** | Cambiar rama por defecto a `*/production` y eliminar `main` raíz. También proteger ramas `*/main` y configurar mirror a GitHub |
+| **Agente (sesión)** | Crear la rama `*/main` y `*/production` para la versión correspondiente |
+| **Operador (desarrollador)** | Establecer la rama `production` de la **MC version más reciente** como default del repo. Eliminar `main` raíz. Proteger `*/main` y configurar mirror a GitHub |
 
-**1. La agente crea la rama `*/main`** (al crear `production`):
+**1. La agente crea las ramas** (al iniciar una nueva versión):
 
 ```bash
-git checkout minecraft/26.1.2/neoforge-26.1.2.76/production
-git checkout -b minecraft/26.1.2/neoforge-26.1.2.76/main
-git push origin minecraft/26.1.2/neoforge-26.1.2.76/main
-git checkout minecraft/26.1.2/neoforge-26.1.2.76/production
+# Crear rama production + su hermana main
+git checkout -b minecraft/26.2/neoforge-26.2.0.32/production
+git push -u origin minecraft/26.2/neoforge-26.2.0.32/production
+git checkout -b minecraft/26.2/neoforge-26.2.0.32/main
+git push -u origin minecraft/26.2/neoforge-26.2.0.32/main
+git checkout minecraft/26.2/neoforge-26.2.0.32/production
 ```
 
-Esto solo se hace **una vez por versión**. A partir de ahí el CI/CD mantiene `*/main` actualizada con force push automático.
+**2. El operador configura el repositorio** (una vez por repo):
 
-**2. El operador configura el repositorio** (una sola vez por repo):
-
-1. **Settings → Repository → Default branch**: cambiar a `minecraft/*/neoforge-*/production` (la rama de trabajo)
+1. **Settings → Repository → Default branch**: cambiar a la rama `production` de la **MC version más reciente** (ej: `minecraft/26.2/neoforge-26.2/` si es la más nueva). Esta será la rama que se ve al clonar.
 2. **Settings → Repository → Branches**: eliminar `main` raíz (si existe)
 3. **Settings → Repository → Protected branches**: proteger `minecraft/*/neoforge-*/main` con force push permitido
 4. **Settings → Repository → Mirroring repositories**: configurar mirror a GitHub
@@ -318,7 +318,7 @@ Esto solo se hace **una vez por versión**. A partir de ahí el CI/CD mantiene `
 La versión se define en `gradle.properties`:
 
 ```properties
-mod_version=1.0.1
+mod_version=0.0.0-beta.1
 ```
 
 ### Nombre del JAR
@@ -327,7 +327,8 @@ El JAR generado sigue el formato `<mod_id>-<minecraft_version>-<framework>-<mod_
 
 | Ejemplo | Significado |
 |---|---|
-| `infotab-26.1.2-neoforge-1.0.1.jar` | NeoForge 26.1.2, release 1.0.1 |
+| `<mod_id>-1.21.1-neoforge-0.0.0-beta.2.jar` | NeoForge 1.21.1, beta 2 |
+| `<mod_id>-1.21.1-neoforge-1.0.0.jar` | NeoForge 1.21.1, release 1.0.0 |
 
 El framework puede ser `neoforge`, `forge` o `fabric` según corresponda. Se configura en `build.gradle`:
 
@@ -390,8 +391,8 @@ Cada vez que se sube una versión a CurseForge se debe crear un tag en GitLab.
 
 | Estado | Formato | Ejemplo |
 |---|---|---|
-| Beta | `<mc-version>-neoforge-beta.X` | `26.1.2-neoforge-beta.15` |
-| Release | `<mc-version>-neoforge-X.Y.Z` | `26.1.2-neoforge-1.0.1` |
+| Beta | `<mc-version>-neoforge-beta.X` | `1.21.1-neoforge-beta.15` |
+| Release | `<mc-version>-neoforge-X.Y.Z` | `1.21.1-neoforge-1.0.0` |
 
 El prefijo `<mc-version>-neoforge` se adapta según la versión de Minecraft y el framework de la rama actual.
 
@@ -399,12 +400,12 @@ El prefijo `<mc-version>-neoforge` se adapta según la versión de Minecraft y e
 
 ```bash
 # Beta
-git tag -a 26.1.2-neoforge-beta.15 -m "v0.0.0-beta.15: Updated WORKFLOW.md"
-git push origin 26.1.2-neoforge-beta.15
+git tag -a 1.21.1-neoforge-beta.15 -m "v0.0.0-beta.15: Updated WORKFLOW.md"
+git push origin 1.21.1-neoforge-beta.15
 
 # Release estable
-git tag -a 26.1.2-neoforge-1.0.1 -m "v1.0.1: Documentation and workflow update"
-git push origin 26.1.2-neoforge-1.0.1
+git tag -a 1.21.1-neoforge-1.0.0 -m "v1.0.0: First stable release"
+git push origin 1.21.1-neoforge-1.0.0
 ```
 
 ---
@@ -413,7 +414,7 @@ git push origin 26.1.2-neoforge-1.0.1
 
 Cada vez que se hace push a una rama `production`, GitLab CI ejecuta automáticamente un pipeline que:
 1. Detecta desde qué rama `production` se disparó
-2. Deriva la rama `main` hermana: `minecraft/26.1.2/neoforge-26.1.2.76/production` → `minecraft/26.1.2/neoforge-26.1.2.76/main`
+2. Deriva la rama `main` hermana: `minecraft/X/N/production` → `minecraft/X/N/main`
 3. Filtra solo los archivos públicos (`src/`, `build.gradle`, `settings.gradle`, `libs/`, etc.)
 4. Sanitiza `gradle.properties` (reemplaza tokens reales con placeholders)
 5. Commitea con force push a la rama `*/main` hermana
@@ -512,18 +513,32 @@ publish-public:
 | `.gitignore` | ✅ | ✅ |
 | `docs/` | ✅ | ❌ |
 | `lib_ext/` | ✅ | ❌ |
-| `graphify-out/` | ✅ | ❌ |
+| `graphify-out/` | ✅ | ❌ (excluido por CI) |
 | `build/` | ❌ (.gitignore) | ❌ |
 
----
+--- (paso a paso)
 
-## Flujo completo (paso a paso)
+### 0. Determinar alcance de versión
+
+Antes de comenzar cualquier tarea sobre un mod, la agente debe:
+
+1. Listar las carpetas de versión dentro del mod (ej: `1.21.1`, `26.1.2`, `26.2`)
+2. Preguntar al usuario usando un selector:
+
+> **¿A qué versión de Minecraft aplica este cambio?**
+
+| Opción | Significado |
+|---|---|
+| **Todas** | Aplicar el cambio en **cada** rama `production` de cada versión |
+| `<versión>` | Aplicar solo en la rama `production` de esa versión (ej: `26.1.2`) |
+
+La agente debe usar la herramienta `question` para presentar estas opciones como selectores. No asumir ni preguntar en texto libre.
 
 ### 1. Desarrollo
 
 ```bash
 # Situarse en la rama de la versión correspondiente
-git checkout minecraft/26.1.2/neoforge-26.1.2.76/production
+git checkout minecraft/1.21.1/neoforge-21.1.238/production
 
 # Hacer cambios en el código
 # Compilar para verificar
@@ -539,28 +554,13 @@ v0.0.0-beta.2"
 git push
 ```
 
-### 2. Copiar a instancia de pruebas
-
-```bash
-# 1. Compilar con clean
-./gradlew.bat clean build
-
-# 2. Copiar JAR a la instancia de CurseForge, reemplazando el anterior
-#    PREGUNTAR: "¿Copiar el JAR a la instancia de pruebas?"
-#    Solo hacer si el usuario confirma.
-
-# 3. Si el usuario confirma:
-#    cp build/libs/infotab-26.1.2-neoforge-1.0.1.jar /ruta/a/la/instancia/mods/
-#    rm /ruta/a/la/instancia/mods/infotab-26.1.2-neoforge-version-anterior.jar
-```
-
-### 3. Probar en instancia
+### 2. Probar en local
 
 - El usuario abre Minecraft y verifica que funcione
 - Si hay errores, se vuelve a Desarrollo (paso 1)
 - Si funciona, se continúa
 
-### 4. Preparar versión para CurseForge
+### 3. Preparar versión para CurseForge
 
 ```bash
 # 1. PREGUNTAR: "¿Subir esta versión a CurseForge?"
@@ -582,12 +582,12 @@ git add -A
 git commit -m "chore: bump version to 0.0.0-beta.3"
 
 # 7. Tag para CurseForge
-git tag -a 26.1.2-neoforge-beta.3 -m "v0.0.0-beta.3: Bugfix release"
-git push origin 26.1.2-neoforge-beta.3
+git tag -a 1.21.1-neoforge-beta.3 -m "v0.0.0-beta.3: Bugfix release"
+git push origin 1.21.1-neoforge-beta.3
 
 # 8. PREGUNTAR: "¿Subir JAR a CurseForge ahora?"
 #    Solo subir si el usuario confirma.
-#    El JAR está en build/libs/infotab-26.1.2-neoforge-0.0.0-beta.3.jar
+#    El JAR está en build/libs/<mod_id>-<minecraft_version>-<framework>-<version>.jar
 
 # 9. Subir a CurseForge usando el script compartido
 #    powershell -File ../codex-docs/scripts/curseforge-upload.ps1
@@ -597,26 +597,29 @@ git push origin 26.1.2-neoforge-beta.3
 #    Es el mismo script para todos los mods, vive en codex-docs.
 ```
 
-### 5. Release estable
+### 4. Release estable
 
 ```bash
 # gradle.properties → mod_version=1.0.0
 git commit -m "chore: bump version to 1.0.0"
-git tag -a 26.1.2-neoforge-1.0.0 -m "v1.0.0: First stable release"
-git push origin 26.1.2-neoforge-1.0.0
+git tag -a 1.21.1-neoforge-1.0.0 -m "v1.0.0: First stable release"
+git push origin 1.21.1-neoforge-1.0.0
 ```
 
-### 6. Actualizar Knowledge Graph (Graphify)
+### 5. Actualizar Knowledge Graph (Graphify)
 
-Después de cada push a remoto, actualizar el grafo de conocimiento:
+Después de cada push a remoto, actualizar el grafo de conocimiento. **`build` no es un comando válido** (versión instalada: 0.9.12) — usar `extract` o `update`:
 
 ```bash
-# 1. Regenerar el grafo del mod
-#    Ruta al ejecutable (Windows):
-"C:\Users\llagu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\graphify.exe" build .
+# Ruta al ejecutable (Windows), o "graphify" a secas si está en PATH:
+GRAPHIFY="C:\Users\llagu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\graphify.exe"
 
-#    O si graphify está en PATH:
-#    graphify build .
+# 1. Regenerar el grafo del mod
+#    Si graphify-out/ NO existe todavía (primera vez): extracción completa con LLM
+"$GRAPHIFY" extract .
+
+#    Si graphify-out/ YA existe (actualización tras cambios de código): más barato, sin LLM
+"$GRAPHIFY" update . --force
 
 # 2. Commit del grafo actualizado
 git add graphify-out/
@@ -626,7 +629,37 @@ git commit -m "chore: update knowledge graph"
 git push
 ```
 
+**Regla importante — nunca crear copias fechadas**: `graphify-out/` contiene únicamente el snapshot **actual** del grafo. No se deben crear subcarpetas tipo `graphify-out/2026-07-27/` como "backup manual" — el historial ya vive en los commits de git (`git log -- graphify-out/`). Si aparecen, hay que borrarlas: son puro peso muerto en el repositorio y no aportan nada que `git log` no dé ya. El `.gitignore` (ver `templates/.gitignore`) excluye por defecto cualquier carpeta con patrón de fecha dentro de `graphify-out/` como red de seguridad.
+
+**Qué archivo leer** (importante para el ahorro de tokens que justifica usar Graphify):
+- **`GRAPH_REPORT.md`** — el resumen legible (nodos, comunidades, hubs de navegación). Es el que debe leer el agente para entender la arquitectura antes de tocar código.
+- `graph.json` y `graph.html` — datos crudos para el visor interactivo. **No leerlos directamente como contexto**: `graph.json` puede pesar >1MB y anula el ahorro de tokens que se busca con el grafo.
+
 > **Nota**: El grafo permite a los asistentes de IA entender la arquitectura del mod sin leer todo el código fuente, reduciendo el consumo de tokens hasta 71×.
+
+#### Backend LLM: Ollama local
+
+`extract` (creación inicial) y `label`/`cluster-only --label` (nombrar comunidades) necesitan un LLM. Está configurado un backend **Ollama local** (`qwen2.5-coder:7b`) en vez de una API de pago (gemini/openai/claude/deepseek) — mismo resultado, sin coste ni cuota externa. `update` (el paso rutinario tras cada push) **no usa LLM** y no se ve afectado por esto.
+
+Variables de entorno de usuario (Windows), ya configuradas en esta máquina — si se monta en otra, replicar:
+
+| Variable | Valor | Motivo |
+|---|---|---|
+| `OLLAMA_MODEL` | `qwen2.5-coder:7b` | modelo afinado para código (el `qwen2.5:7b` base da peor extracción semántica) |
+| `OLLAMA_BASE_URL` | `http://localhost:11434/v1` | endpoint OpenAI-compatible de Ollama |
+| `OLLAMA_API_KEY` | `ollama` (cualquier valor no vacío) | Ollama ignora la auth, pero el cliente OpenAI exige el header |
+| `GRAPHIFY_OLLAMA_NUM_CTX` | `8192` | Ollama trunca a 2048 tokens de contexto por defecto y devuelve respuestas vacías/incompletas en ficheros de código reales |
+
+```bash
+# Requisito: Ollama corriendo (ollama serve) con el modelo descargado
+ollama pull qwen2.5-coder:7b
+
+# Con las variables de entorno ya seteadas, basta con:
+"$GRAPHIFY" extract . --backend ollama
+"$GRAPHIFY" label . --backend ollama
+```
+
+Si `ollama list` no muestra `qwen2.5-coder:7b` o el servicio no responde en `localhost:11434`, Graphify falla al intentar `extract`/`label` — en ese caso, avisar al usuario en vez de asumir otro backend (no usar una API de pago sin confirmar).
 
 ---
 
@@ -638,12 +671,12 @@ git push
 - **Versionar antes de subir a CurseForge**: el tag debe apuntar al commit exacto del JAR que se sube
 - **CHANGELOG.md siempre actualizado**: reflejar todos los cambios de cada versión
 - **Siempre hacer `clean build` antes de generar el JAR final**: la caché de Gradle puede dejar artefactos obsoletos o corruptos que no se detectan en compilaciones incrementales; `clean` fuerza una compilación desde cero
-- **Graphify**: mantener el knowledge graph actualizado tras cada release para que los asistentes de IA tengan contexto preciso del proyecto
+- **Graphify**: mantener el knowledge graph actualizado tras cada release (ver [sección 5](#5-actualizar-knowledge-graph-graphify)); leer siempre `GRAPH_REPORT.md`, nunca `graph.json`/`graph.html` como contexto, y no crear copias fechadas de `graphify-out/`
 - **Nomenclatura consistente**: no mezclar snake_case, PascalCase, camelCase o Title Case en contextos donde no corresponde
-- **Sin archivos basura en el repositorio**: eliminar `nul`, `TEMPLATE_LICENSE.txt`, `errors.txt`, `build_errors.txt` y otros artefactos temporales antes de commitear
+- **Sin archivos basura en el repositorio**: eliminar `nul`, `TEMPLATE_LICENSE.txt`, `errors.txt`, `compile_errors.txt`, `build_errors.txt` y otros artefactos temporales antes de commitear
 - **README.md actualizado y en inglés**: el README debe reflejar siempre el estado actual del mod, con descripción, requisitos, instalación y enlaces. Debe estar escrito en **inglés** (en-US) por ser la puerta de entrada al proyecto desde GitHub
 - **Sin residuos de mod original**: si el mod está basado en otro mod existente (fork/referencia), no debe quedar ningún rastro accidental del mod original. Revisar:
-  - Nombres de paquetes (`com/oldauthor/oldmod/` → `com/skd/infotab/`)
+  - Nombres de paquetes (`com/oldauthor/oldmod/` → `com/skd/nuevomod/`)
   - Nombres de clases, métodos y variables
   - Referencias en `neoforge.mods.toml` (modid, description, credits)
   - Textos en lang/ (en_us.json, etc.)
@@ -669,17 +702,4 @@ El código, los logs y los commits siguen el estándar internacional de programa
 
 ## Historial de versiones del workflow
 
-| Versión | Fecha | Cambios |
-|---|---|---|
-| 1.5.0 | 2026-07-23 | Workspace: `.git/` en `<mod_id>/`, versiones como subcarpetas, cada una en su rama |
-| 1.4.0 | 2026-07-23 | Organización en workspace: todos los mods usan `<mod_id>/<mc-version>/` tengan 1 o N versiones |
-| 1.2.7 | 2026-07-23 | Versión actual del genérico |
-| 1.2.6 | 2026-07-23 | Fix YAML en CI: `|| (&&)` reemplazado por bloque `if` para evitar error de sintaxis |
-| 1.2.5 | 2026-07-23 | `*/main` es ahora la rama por defecto, `main` raíz eliminada |
-| 1.2.4 | 2026-07-23 | Roles clarificados: agente crea `*/main`, operador elimina `main` raíz + protege + mirror |
-| 1.2.3 | 2026-07-23 | CI: elimina creación automática de `*/main` (orphan). Si no existe, falla. Rama `main` raíz marcada para eliminar |
-| 1.2.2 | 2026-07-23 | CI: `libs/` separado como opcional en checkout para no fallar si el mod no lo tiene |
-| 1.2.1 | 2026-07-21 | Limpieza de tabla de ramas (eliminadas filas duplicadas) |
-| 1.2.0 | 2026-07-21 | Separación clara de roles: agente crea `*/main`, operador protege + mirror. Sección reescrita con tabla de responsabilidades |
-| 1.1.0 | 2026-07-21 | CI: eliminado `mod_curseforge_token` (nunca en gradle.properties). Script: displayName usa `mod_name`. Workflow: añadido paso de subida con el script compartido |
-| 1.0.0 | 2026-07-21 | Versión inicial: estructura, naming, tipografía, CI/CD, Graphify, fork attribution, temp/, README en inglés |
+El historial de cambios de este archivo (y de todo `codex-docs`) se documenta en [`codex-docs/CHANGELOG.md`](CHANGELOG.md) — no se duplica aquí.

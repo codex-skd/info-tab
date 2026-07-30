@@ -4,12 +4,11 @@ license="${mod_license}"
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
-logoFile="infotab.png"
+logoFile="${mod_id}.png"
 authors="skd"
 description='''
 Adds the dimension that a user is currently in to the tab list for easy access.
 
-This is a server-side mod and therefore does not need to be installed on the client.
 Features:
 - Shows current dimension in the tab list
 - Customizable colors per dimension (Overworld, Nether, End, modded)
@@ -22,10 +21,10 @@ Features:
 displayTest="IGNORE_SERVER_VERSION"
 
 [[mixins]]
-config="infotab.mixins.json"
+config="${mod_id}.mixins.json"
 
 [[mixins]]
-config="infotab.neoforge.mixins.json"
+config="${mod_id}.neoforge.mixins.json"
 
 [[dependencies.${mod_id}]]
     modId="neoforge"
