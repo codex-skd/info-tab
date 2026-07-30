@@ -45,3 +45,5 @@ graphify-out/
 
 ### Temp ###
 temp/
+# Graphify - solo el snapshot actual, sin copias fechadas
+graphify-out/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
