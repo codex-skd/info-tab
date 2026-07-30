@@ -1,0 +1,152 @@
+{
+  "build.gradle": {
+    "mtime": 1785407999.5439322,
+    "ast_hash": "9f8843db5c6e5c790f508a94517cf34a",
+    "semantic_hash": ""
+  },
+  "gradlew": {
+    "mtime": 1785407900.68519,
+    "ast_hash": "794669d78aef1dd5c7d889ef618b311a",
+    "semantic_hash": ""
+  },
+  "settings.gradle": {
+    "mtime": 1785407900.775309,
+    "ast_hash": "58a5df05c6546d7d2671a516793e02e7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/AfkActivityClientHandler.java": {
+    "mtime": 1785432580.1074228,
+    "ast_hash": "a42031a114578c87616f90463ac62ac6",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/AfkNameTagHandler.java": {
+    "mtime": 1785432413.2786088,
+    "ast_hash": "54a8ac4f760662e699238456ba1aa007",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/AfkTracker.java": {
+    "mtime": 1785432398.36089,
+    "ast_hash": "74c302e08abf47f325aca20e2197b8d7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/CommonUtils.java": {
+    "mtime": 1785432398.4592564,
+    "ast_hash": "b0a33ecac785d8f4730f969a78897407",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/Config.java": {
+    "mtime": 1785432398.5633836,
+    "ast_hash": "c9d0727be0035b2dd777771c6f409c2e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/CustomCommands.java": {
+    "mtime": 1785432398.625405,
+    "ast_hash": "a18ca9dff207076e6d8212b87d5c5669",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/InfoTab.java": {
+    "mtime": 1785432398.6907601,
+    "ast_hash": "c5aec2b2798200fc651bc335cf09867c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/InfoTabClient.java": {
+    "mtime": 1785432398.7731996,
+    "ast_hash": "1b59bf3f38cf21cdabb555226dc815f4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/PlayerListHandler.java": {
+    "mtime": 1785432628.5408206,
+    "ast_hash": "6ce2abc31ecdfbb4a7e4d03f4a4ff886",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/PlayerListHandlerNeoForge.java": {
+    "mtime": 1785432399.1908138,
+    "ast_hash": "6dc48be6a23f7d661697b5dfc590fdca",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/network/ActivityPingPacket.java": {
+    "mtime": 1785432398.840205,
+    "ast_hash": "81d7653dad24c1a3c90aa74caed327b7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/platform/NeoForgeConfigHelper.java": {
+    "mtime": 1785432398.9112206,
+    "ast_hash": "c49c84fd688426055d0b2ad1d499ef85",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/platform/Services.java": {
+    "mtime": 1785432399.0322623,
+    "ast_hash": "baf9928f17caa5cc753a90fde73f44c7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/skd/infotab/platform/services/IConfigHelper.java": {
+    "mtime": 1785432398.975137,
+    "ast_hash": "82e7e098d4039777510c4586895a7d89",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/infotab/lang/en_us.json": {
+    "mtime": 1785408036.8472672,
+    "ast_hash": "ea7068888bff81ec75b0bf5f11178a15",
+    "semantic_hash": ""
+  },
+  "src/main/resources/infotab.mixins.json": {
+    "mtime": 1785408036.9701273,
+    "ast_hash": "fbe58fb2ab9deff199f860627a10bb15",
+    "semantic_hash": ""
+  },
+  "src/main/resources/infotab.neoforge.mixins.json": {
+    "mtime": 1785408037.000628,
+    "ast_hash": "b06329a8ae8b9b3f2775c018a970cf2a",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1785408108.83597,
+    "ast_hash": "8b0c1675ba4394cc5d47150e0a3b1466",
+    "semantic_hash": ""
+  },
+  ".gitlab-ci.yml": {
+    "mtime": 1785408101.0766792,
+    "ast_hash": "14c0a4ad0f5bec65ebfaf8c37e148365",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1785408178.5484488,
+    "ast_hash": "cd3b8aa4668121cb0ace3c496be2e433",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785408166.4447758,
+    "ast_hash": "537719b6d8dcdf0a1f7e1d8f3f8f3589",
+    "semantic_hash": ""
+  },
+  "docs/WORKFLOW_INFO_TAB_26-2.md": {
+    "mtime": 1785408155.852034,
+    "ast_hash": "19f0b8a0401973e5922d216dd4eda8a1",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_description.md": {
+    "mtime": 1785408101.1407135,
+    "ast_hash": "151385bc33efe00f87485bbeee3fb1c1",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/project_vars.md": {
+    "mtime": 1785408112.6681476,
+    "ast_hash": "ad50aa68380d927c926a6f383a8747fc",
+    "semantic_hash": ""
+  },
+  "docs/curseforge/versions/0.0.0-beta.1.md": {
+    "mtime": 1785408191.1064541,
+    "ast_hash": "bec8e9ca277fa697840baf31abb923ec",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/infotab/icon.png": {
+    "mtime": 1785408036.8931587,
+    "ast_hash": "33cb92ad588c3a6f08bc2e3d7aa009da",
+    "semantic_hash": ""
+  },
+  "src/main/resources/infotab.png": {
+    "mtime": 1785408036.9411194,
+    "ast_hash": "33cb92ad588c3a6f08bc2e3d7aa009da",
+    "semantic_hash": ""
+  }
+}
