@@ -7,6 +7,11 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 
 Para el historial completo de la versión 26.1.2, ver `info_tab/26.1.2/CHANGELOG.md` (rama `minecraft/26.1.2/neoforge-26.1.2.76/production`).
 
+## [0.0.0-beta.2] - 2026-07-30
+
+### Changed
+- **Breaking**: `mod_id` normalizado de `infotab` a `info_tab` para coincidir con el nombre de la carpeta del proyecto, según la convención estándar del workspace. Cambia el canal de red (`info_tab:activity_ping`), el namespace de assets (`assets/info_tab/`), y el nombre del JAR generado (`info_tab-26.2-neoforge-<version>.jar`). El comando `/infotab` y el paquete Java (`com.skd.infotab`) no cambian.
+
 ## [0.0.0-beta.1] - 2026-07-30
 
 ### Added
