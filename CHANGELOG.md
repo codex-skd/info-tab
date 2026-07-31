@@ -7,6 +7,11 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 
 Para el historial completo de la versión 26.1.2, ver `info_tab/26.1.2/CHANGELOG.md` (rama `minecraft/26.1.2/neoforge-26.1.2.76/production`).
 
+## [1.0.0] - 2026-07-31
+
+### Changed
+- Primera versión estable del port a Minecraft 26.2 / NeoForge 26.2.0.32-beta, confirmado su funcionamiento correcto tras las betas 0.0.0-beta.1 a 0.0.0-beta.3.
+
 ## [0.0.0-beta.3] - 2026-07-31
 
 ### Fixed
