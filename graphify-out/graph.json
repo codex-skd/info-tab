@@ -1506,7 +1506,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main_java_com_skd_infotab_platform_neoforgeconfighelper",
-      "community": 2,
+      "community": 9,
       "norm_label": "neoforgeconfighelper.java"
     },
     {
@@ -1766,7 +1766,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_java_playerlist",
-      "community": 2,
+      "community": 9,
       "norm_label": "playerlist"
     },
     {
@@ -2100,20 +2100,20 @@
       "norm_label": "claude.md \u2014 info_tab (26.2)"
     },
     {
-      "label": "Paso 0 obligatorio",
+      "label": "Workflow del mod",
       "file_type": "document",
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "claude_claude_paso_0_obligatorio",
+      "id": "claude_claude_workflow_del_mod",
       "community": 14,
-      "norm_label": "paso 0 obligatorio"
+      "norm_label": "workflow del mod"
     },
     {
       "label": "Prioridad de instrucciones",
       "file_type": "document",
       "source_file": ".claude/CLAUDE.md",
-      "source_location": "L12",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "claude_claude_prioridad_de_instrucciones",
       "community": 14,
@@ -2140,10 +2140,30 @@
       "norm_label": "changelog"
     },
     {
-      "label": "[0.0.0-beta.3] - 2026-07-31",
+      "label": "[1.0.0] - 2026-07-31",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L10",
+      "_origin": "ast",
+      "id": "changelog_1_0_0_2026_07_31",
+      "community": 13,
+      "norm_label": "[1.0.0] - 2026-07-31"
+    },
+    {
+      "label": "Changed",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "changelog_changed",
+      "community": 13,
+      "norm_label": "changed"
+    },
+    {
+      "label": "[0.0.0-beta.3] - 2026-07-31",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_3_2026_07_31",
       "community": 13,
@@ -2153,7 +2173,7 @@
       "label": "Fixed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L12",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "changelog_fixed",
       "community": 13,
@@ -2163,7 +2183,7 @@
       "label": "[0.0.0-beta.2] - 2026-07-30",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L15",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_2_2026_07_30",
       "community": 13,
@@ -2173,9 +2193,9 @@
       "label": "Changed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L17",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "changelog_changed",
+      "id": "changelog_changed_22",
       "community": 13,
       "norm_label": "changed"
     },
@@ -2183,7 +2203,7 @@
       "label": "[0.0.0-beta.1] - 2026-07-30",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L20",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "changelog_0_0_0_beta_1_2026_07_30",
       "community": 13,
@@ -2193,7 +2213,7 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L22",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "changelog_added",
       "community": 13,
@@ -2290,412 +2310,92 @@
       "norm_label": "flujo de trabajo \u2014 info tab (neoforge)"
     },
     {
-      "label": "Convenciones de nomenclatura",
+      "label": "Espec\u00edfico del mod",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
       "source_location": "L8",
+      "_origin": "ast",
+      "id": "docs_workflow_info_tab_26_2_espec\u00edfico_del_mod",
+      "community": 0,
+      "norm_label": "especifico del mod"
+    },
+    {
+      "label": "Convenciones de nomenclatura",
+      "file_type": "document",
+      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "docs_workflow_info_tab_26_2_convenciones_de_nomenclatura",
       "community": 0,
       "norm_label": "convenciones de nomenclatura"
     },
     {
-      "label": "Ficheros de documentaci\u00f3n",
+      "label": "Organizaci\u00f3n y ramas",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L17",
+      "source_location": "L27",
       "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_ficheros_de_documentaci\u00f3n",
+      "id": "docs_workflow_info_tab_26_2_organizaci\u00f3n_y_ramas",
       "community": 0,
-      "norm_label": "ficheros de documentacion"
-    },
-    {
-      "label": "Organizaci\u00f3n en el workspace",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_organizaci\u00f3n_en_el_workspace",
-      "community": 0,
-      "norm_label": "organizacion en el workspace"
-    },
-    {
-      "label": "Tipograf\u00eda",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L65",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_tipograf\u00eda",
-      "community": 0,
-      "norm_label": "tipografia"
+      "norm_label": "organizacion y ramas"
     },
     {
       "label": "Estructura del proyecto",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L73",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "docs_workflow_info_tab_26_2_estructura_del_proyecto",
       "community": 0,
       "norm_label": "estructura del proyecto"
     },
     {
-      "label": "Archivos de CurseForge",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L117",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_archivos_de_curseforge",
-      "community": 0,
-      "norm_label": "archivos de curseforge"
-    },
-    {
-      "label": "Formato de descripciones CurseForge",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L129",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_formato_de_descripciones_curseforge",
-      "community": 0,
-      "norm_label": "formato de descripciones curseforge"
-    },
-    {
-      "label": "Estructura de la descripci\u00f3n general",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L140",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_estructura_de_la_descripci\u00f3n_general",
-      "community": 0,
-      "norm_label": "estructura de la descripcion general"
-    },
-    {
-      "label": "Elementos HTML disponibles",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L154",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_elementos_html_disponibles",
-      "community": 0,
-      "norm_label": "elementos html disponibles"
-    },
-    {
-      "label": "Buenas pr\u00e1cticas",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L173",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_buenas_pr\u00e1cticas",
-      "community": 0,
-      "norm_label": "buenas practicas"
-    },
-    {
-      "label": "Formato del changelog",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L182",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_formato_del_changelog",
-      "community": 0,
-      "norm_label": "formato del changelog"
-    },
-    {
-      "label": "Ejemplo de estructura HTML para release notes",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L193",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_ejemplo_de_estructura_html_para_release_notes",
-      "community": 0,
-      "norm_label": "ejemplo de estructura html para release notes"
-    },
-    {
-      "label": "Elementos HTML permitidos",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L209",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_elementos_html_permitidos",
-      "community": 0,
-      "norm_label": "elementos html permitidos"
-    },
-    {
-      "label": "Ramas",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L224",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_ramas",
-      "community": 0,
-      "norm_label": "ramas"
-    },
-    {
-      "label": "Estructura",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L226",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_estructura",
-      "community": 0,
-      "norm_label": "estructura"
-    },
-    {
-      "label": "Ejemplos",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L234",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_ejemplos",
-      "community": 0,
-      "norm_label": "ejemplos"
-    },
-    {
-      "label": "Esquema de publicaci\u00f3n",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L243",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_esquema_de_publicaci\u00f3n",
-      "community": 0,
-      "norm_label": "esquema de publicacion"
-    },
-    {
-      "label": "Inicializaci\u00f3n \u00fanica de cada rama `*/main`",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L264",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_inicializaci\u00f3n_\u00fanica_de_cada_rama_main",
-      "community": 0,
-      "norm_label": "inicializacion unica de cada rama `*/main`"
-    },
-    {
       "label": "Versionado",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L299",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "docs_workflow_info_tab_26_2_versionado",
       "community": 0,
       "norm_label": "versionado"
     },
     {
-      "label": "Esquema",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L301",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_esquema",
-      "community": 0,
-      "norm_label": "esquema"
-    },
-    {
-      "label": "\u00bfCu\u00e1ndo incrementar versi\u00f3n?",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L313",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_cu\u00e1ndo_incrementar_versi\u00f3n",
-      "community": 0,
-      "norm_label": "\u00bfcuando incrementar version?"
-    },
-    {
-      "label": "Nombre del JAR",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L324",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_nombre_del_jar",
-      "community": 0,
-      "norm_label": "nombre del jar"
-    },
-    {
       "label": "Commits (Conventional Commits)",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L343",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "docs_workflow_info_tab_26_2_commits_conventional_commits",
       "community": 0,
       "norm_label": "commits (conventional commits)"
     },
     {
-      "label": "Tipos",
+      "label": "Tags",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L353",
+      "source_location": "L45",
       "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_tipos",
+      "id": "docs_workflow_info_tab_26_2_tags",
       "community": 0,
-      "norm_label": "tipos"
+      "norm_label": "tags"
     },
     {
-      "label": "Ejemplos",
+      "label": "Flujo por tarea",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L366",
+      "source_location": "L49",
       "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_ejemplos_366",
+      "id": "docs_workflow_info_tab_26_2_flujo_por_tarea",
       "community": 0,
-      "norm_label": "ejemplos"
-    },
-    {
-      "label": "Tags (GitLab)",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L386",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_tags_gitlab",
-      "community": 0,
-      "norm_label": "tags (gitlab)"
-    },
-    {
-      "label": "Formato del tag",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L390",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_formato_del_tag",
-      "community": 0,
-      "norm_label": "formato del tag"
-    },
-    {
-      "label": "Ejemplos",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L399",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_ejemplos_399",
-      "community": 0,
-      "norm_label": "ejemplos"
-    },
-    {
-      "label": "Publicaci\u00f3n a GitHub (CI/CD)",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L413",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "community": 8,
-      "norm_label": "publicacion a github (ci/cd)"
-    },
-    {
-      "label": "Variables de CI/CD (grupo GitLab)",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L423",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_variables_de_ci_cd_grupo_gitlab",
-      "community": 8,
-      "norm_label": "variables de ci/cd (grupo gitlab)"
-    },
-    {
-      "label": "Requisito previo",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L435",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_requisito_previo",
-      "community": 8,
-      "norm_label": "requisito previo"
-    },
-    {
-      "label": ".gitlab-ci.yml",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L439",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_gitlab_ci_yml",
-      "community": 8,
-      "norm_label": ".gitlab-ci.yml"
-    },
-    {
-      "label": "Archivos que pasan a GitHub",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L502",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_archivos_que_pasan_a_github",
-      "community": 8,
-      "norm_label": "archivos que pasan a github"
-    },
-    {
-      "label": "0. Determinar alcance de versi\u00f3n",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L521",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_0_determinar_alcance_de_versi\u00f3n",
-      "community": 8,
-      "norm_label": "0. determinar alcance de version"
-    },
-    {
-      "label": "1. Desarrollo",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L537",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_1_desarrollo",
-      "community": 8,
-      "norm_label": "1. desarrollo"
-    },
-    {
-      "label": "2. Probar en local",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L557",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_2_probar_en_local",
-      "community": 8,
-      "norm_label": "2. probar en local"
-    },
-    {
-      "label": "3. Preparar versi\u00f3n para CurseForge",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L563",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_3_preparar_versi\u00f3n_para_curseforge",
-      "community": 8,
-      "norm_label": "3. preparar version para curseforge"
-    },
-    {
-      "label": "4. Release estable",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L600",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_4_release_estable",
-      "community": 8,
-      "norm_label": "4. release estable"
-    },
-    {
-      "label": "5. Actualizar Knowledge Graph (Graphify)",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L609",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_5_actualizar_knowledge_graph_graphify",
-      "community": 8,
-      "norm_label": "5. actualizar knowledge graph (graphify)"
-    },
-    {
-      "label": "Backend LLM: Ollama local",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L640",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_backend_llm_ollama_local",
-      "community": 8,
-      "norm_label": "backend llm: ollama local"
+      "norm_label": "flujo por tarea"
     },
     {
       "label": "Buenas pr\u00e1cticas",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L666",
+      "source_location": "L84",
       "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_buenas_pr\u00e1cticas_666",
+      "id": "docs_workflow_info_tab_26_2_buenas_pr\u00e1cticas",
       "community": 0,
       "norm_label": "buenas practicas"
     },
@@ -2703,21 +2403,11 @@
       "label": "Idioma",
       "file_type": "document",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L690",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "docs_workflow_info_tab_26_2_idioma",
       "community": 0,
       "norm_label": "idioma"
-    },
-    {
-      "label": "Historial de versiones del workflow",
-      "file_type": "document",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L703",
-      "_origin": "ast",
-      "id": "docs_workflow_info_tab_26_2_historial_de_versiones_del_workflow",
-      "community": 0,
-      "norm_label": "historial de versiones del workflow"
     },
     {
       "label": "project_description.md",
@@ -2778,6 +2468,16 @@
       "id": "docs_curseforge_versions_0_0_0_beta_3",
       "community": 22,
       "norm_label": "0.0.0-beta.3.md"
+    },
+    {
+      "label": "1.0.0.md",
+      "file_type": "document",
+      "source_file": "docs/curseforge/versions/1.0.0.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_curseforge_versions_1_0_0",
+      "community": 8,
+      "norm_label": "1.0.0.md"
     }
   ],
   "links": [
@@ -6806,20 +6506,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".claude/CLAUDE.md",
-      "source_location": "L5",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "claude_claude_claude_md_info_tab_26_2",
-      "target": "claude_claude_paso_0_obligatorio",
+      "target": "claude_claude_prioridad_de_instrucciones",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".claude/CLAUDE.md",
-      "source_location": "L12",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "claude_claude_claude_md_info_tab_26_2",
-      "target": "claude_claude_prioridad_de_instrucciones",
+      "target": "claude_claude_workflow_del_mod",
       "confidence_score": 1.0
     },
     {
@@ -6836,7 +6536,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L20",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_0_0_0_beta_1_2026_07_30",
@@ -6846,7 +6546,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L15",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_0_0_0_beta_2_2026_07_30",
@@ -6856,7 +6556,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L10",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "changelog_changelog",
       "target": "changelog_0_0_0_beta_3_2026_07_31",
@@ -6866,7 +6566,27 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_1_0_0_2026_07_31",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
       "source_location": "L12",
+      "weight": 1.0,
+      "source": "changelog_1_0_0_2026_07_31",
+      "target": "changelog_changed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_3_2026_07_31",
       "target": "changelog_fixed",
@@ -6876,17 +6596,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L17",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_2_2026_07_30",
-      "target": "changelog_changed",
+      "target": "changelog_changed_22",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L22",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "changelog_0_0_0_beta_1_2026_07_30",
       "target": "changelog_added",
@@ -6966,17 +6686,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L666",
+      "source_location": "L84",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
-      "target": "docs_workflow_info_tab_26_2_buenas_pr\u00e1cticas_666",
+      "target": "docs_workflow_info_tab_26_2_buenas_pr\u00e1cticas",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L343",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
       "target": "docs_workflow_info_tab_26_2_commits_conventional_commits",
@@ -6986,7 +6706,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L8",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
       "target": "docs_workflow_info_tab_26_2_convenciones_de_nomenclatura",
@@ -6996,7 +6716,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L73",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
+      "target": "docs_workflow_info_tab_26_2_espec\u00edfico_del_mod",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
       "target": "docs_workflow_info_tab_26_2_estructura_del_proyecto",
@@ -7006,17 +6736,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L703",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
-      "target": "docs_workflow_info_tab_26_2_historial_de_versiones_del_workflow",
+      "target": "docs_workflow_info_tab_26_2_flujo_por_tarea",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L690",
+      "source_location": "L91",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
       "target": "docs_workflow_info_tab_26_2_idioma",
@@ -7026,370 +6756,30 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L37",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
-      "target": "docs_workflow_info_tab_26_2_organizaci\u00f3n_en_el_workspace",
+      "target": "docs_workflow_info_tab_26_2_organizaci\u00f3n_y_ramas",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L413",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
-      "target": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
+      "target": "docs_workflow_info_tab_26_2_tags",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L224",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
-      "target": "docs_workflow_info_tab_26_2_ramas",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L386",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
-      "target": "docs_workflow_info_tab_26_2_tags_gitlab",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L65",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
-      "target": "docs_workflow_info_tab_26_2_tipograf\u00eda",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L299",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "docs_workflow_info_tab_26_2_flujo_de_trabajo_info_tab_neoforge",
       "target": "docs_workflow_info_tab_26_2_versionado",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_convenciones_de_nomenclatura",
-      "target": "docs_workflow_info_tab_26_2_ficheros_de_documentaci\u00f3n",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L117",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_estructura_del_proyecto",
-      "target": "docs_workflow_info_tab_26_2_archivos_de_curseforge",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L129",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_estructura_del_proyecto",
-      "target": "docs_workflow_info_tab_26_2_formato_de_descripciones_curseforge",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L173",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_formato_de_descripciones_curseforge",
-      "target": "docs_workflow_info_tab_26_2_buenas_pr\u00e1cticas",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L193",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_formato_de_descripciones_curseforge",
-      "target": "docs_workflow_info_tab_26_2_ejemplo_de_estructura_html_para_release_notes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L154",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_formato_de_descripciones_curseforge",
-      "target": "docs_workflow_info_tab_26_2_elementos_html_disponibles",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L209",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_formato_de_descripciones_curseforge",
-      "target": "docs_workflow_info_tab_26_2_elementos_html_permitidos",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L140",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_formato_de_descripciones_curseforge",
-      "target": "docs_workflow_info_tab_26_2_estructura_de_la_descripci\u00f3n_general",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L182",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_formato_de_descripciones_curseforge",
-      "target": "docs_workflow_info_tab_26_2_formato_del_changelog",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L234",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_ramas",
-      "target": "docs_workflow_info_tab_26_2_ejemplos",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L243",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_ramas",
-      "target": "docs_workflow_info_tab_26_2_esquema_de_publicaci\u00f3n",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L226",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_ramas",
-      "target": "docs_workflow_info_tab_26_2_estructura",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L264",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_ramas",
-      "target": "docs_workflow_info_tab_26_2_inicializaci\u00f3n_\u00fanica_de_cada_rama_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L313",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_versionado",
-      "target": "docs_workflow_info_tab_26_2_cu\u00e1ndo_incrementar_versi\u00f3n",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L301",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_versionado",
-      "target": "docs_workflow_info_tab_26_2_esquema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L324",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_versionado",
-      "target": "docs_workflow_info_tab_26_2_nombre_del_jar",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L366",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_commits_conventional_commits",
-      "target": "docs_workflow_info_tab_26_2_ejemplos_366",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L353",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_commits_conventional_commits",
-      "target": "docs_workflow_info_tab_26_2_tipos",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L399",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_tags_gitlab",
-      "target": "docs_workflow_info_tab_26_2_ejemplos_399",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L390",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_tags_gitlab",
-      "target": "docs_workflow_info_tab_26_2_formato_del_tag",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L521",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_0_determinar_alcance_de_versi\u00f3n",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L537",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_1_desarrollo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L557",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_2_probar_en_local",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L563",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_3_preparar_versi\u00f3n_para_curseforge",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L600",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_4_release_estable",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L609",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_5_actualizar_knowledge_graph_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L502",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_archivos_que_pasan_a_github",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L439",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_gitlab_ci_yml",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L435",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_requisito_previo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L423",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_publicaci\u00f3n_a_github_ci_cd",
-      "target": "docs_workflow_info_tab_26_2_variables_de_ci_cd_grupo_gitlab",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/WORKFLOW_INFO_TAB_26-2.md",
-      "source_location": "L640",
-      "weight": 1.0,
-      "source": "docs_workflow_info_tab_26_2_5_actualizar_knowledge_graph_graphify",
-      "target": "docs_workflow_info_tab_26_2_backend_llm_ollama_local",
       "confidence_score": 1.0
     },
     {
@@ -7404,5 +6794,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "fe8bc2b21a1717a61b28158c1375c62e5bcc6577"
+  "built_at_commit": "a4c151d7db89822bf9ab32a19503df03c02f1985"
 }
