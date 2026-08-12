@@ -1,5 +1,12 @@
 ## [1.0.6] - 2026-07-30
 
+
+## [1.0.7] - 2026-08-12
+
+### Change
+
+- **Nombre de JAR con versión del cargador**: el artefacto ahora se compila como `info_tab-26.1.2-neoforge-26.1.2.76-1.0.7.jar` (se añade la versión de cargador/NeoForge al nombre del archivo). Empaquetado y documentación; sin cambios de funcionalidad.
+
 ### Changed
 - **Breaking**: `mod_id` normalized from `infotab` to `info_tab` to match the project folder name, per the workspace's standard naming convention. This changes the mod's internal identifier — the network channel is now `info_tab:activity_ping`, the config file name, the asset namespace (`assets/info_tab/`), and the generated JAR name (`info_tab-26.1.2-neoforge-<version>.jar`). The `/infotab` command and the Java package (`com.skd.infotab`) are unchanged. Existing per-world/server saved config under the old `infotab` id will not carry over automatically.
 - Workflow doc synced to `codex-docs/WORKFLOW_GENERIC.md` v1.12.0.
