@@ -1,0 +1,436 @@
+{
+  "communities": {
+    "0": [
+      "src_main_java_com_skd_infotab_commonutils_dimensionposition",
+      "src_main_java_com_skd_infotab_commonutils_dimensionposition_append",
+      "src_main_java_com_skd_infotab_commonutils_dimensionposition_prepend",
+      "src_main_java_com_skd_infotab_platform_services",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_addcustomcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_basedefaultcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_baseendcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_baselistformat",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_basenethercolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_baseoverworldcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_defaultcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_endcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_getalias",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_getallcustomcolors",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_getcustomcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_hasalias",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_listformat",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_nethercolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_overworldcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_refreshplayerdata",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_removecustomcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_resetalias",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_resetcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_setalias",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_setboolsetting",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_setcolor",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_setformat",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper_setplacement",
+      "src_main_java_com_skd_infotab_platform_services_iconfighelper_java_playerlist",
+      "src_main_java_com_skd_infotab_platform_services_services",
+      "src_main_java_com_skd_infotab_platform_services_services_load",
+      "src_main_java_com_skd_infotab_playerlisthandlerneoforge",
+      "src_main_java_com_skd_infotab_playerlisthandlerneoforge_java_override",
+      "src_main_java_com_skd_infotab_playerlisthandlerneoforge_playerlisthandlerneoforge",
+      "src_main_java_com_skd_infotab_playerlisthandlerneoforge_playerlisthandlerneoforge_checkforaliases"
+    ],
+    "1": [
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_java_override",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_java_playerlist",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_addcustomcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_basedefaultcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_baseendcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_baselistformat",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_basenethercolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_baseoverworldcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_defaultcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_endcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_getalias",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_getallcustomcolors",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_getcustomcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_hasalias",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_listformat",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_nethercolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_overworldcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_refreshplayerdata",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_removecustomcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_resetalias",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_resetcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_setalias",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_setboolsetting",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_setcolor",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_setformat",
+      "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper_setplacement"
+    ],
+    "2": [
+      "commandcontext",
+      "commanddispatcher",
+      "commandsourcestack",
+      "src_main_java_com_skd_infotab_customcommands",
+      "src_main_java_com_skd_infotab_customcommands_customcommands",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_getaliaseddimensionsuggestions",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_getcoloreddimensionsuggestions",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_getdimensionid",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_getdimensionsuggestions",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_listaliases",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_listcolors",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_refreshdisplaynames",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_registercommands",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_reloadconfig",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_resetalias",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_resetcolor",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setalias",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setboolsetting",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setcolor",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setdefaultcolor",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setendcolor",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setformat",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setnethercolor",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setoverworldcolor",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_setplacement",
+      "src_main_java_com_skd_infotab_customcommands_customcommands_showhelp"
+    ],
+    "3": [
+      "entityinteract",
+      "leftclickblock",
+      "rightclickblock",
+      "rightclickempty",
+      "rightclickitem",
+      "serverchatevent",
+      "serverplayer",
+      "src_main_java_com_skd_infotab_afktracker",
+      "src_main_java_com_skd_infotab_afktracker_afktracker",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_isafk",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_onplayerchat",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_onplayerentityinteract",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_onplayerleftclickblock",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_onplayerlogout",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_onplayerrightclickblock",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_onplayerrightclickempty",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_onplayerrightclickitem",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_onservertick",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_removeplayer",
+      "src_main_java_com_skd_infotab_afktracker_afktracker_updateactivity",
+      "src_main_java_com_skd_infotab_afktracker_java_eventbussubscriber",
+      "src_main_java_com_skd_infotab_afktracker_java_playerloggedoutevent",
+      "src_main_java_com_skd_infotab_afktracker_java_post",
+      "src_main_java_com_skd_infotab_afktracker_java_subscribeevent",
+      "vec3"
+    ],
+    "4": [
+      "ieventbus",
+      "playerchangeddimensionevent",
+      "playerevent",
+      "playerloggedinevent",
+      "playerrespawnevent",
+      "registercommandsevent",
+      "registerpayloadhandlersevent",
+      "src_main_java_com_skd_infotab_infotab",
+      "src_main_java_com_skd_infotab_infotab_infotab",
+      "src_main_java_com_skd_infotab_infotab_infotab_infotab",
+      "src_main_java_com_skd_infotab_infotab_infotab_registerpackets",
+      "src_main_java_com_skd_infotab_infotab_java_eventbussubscriber",
+      "src_main_java_com_skd_infotab_infotab_java_mod",
+      "src_main_java_com_skd_infotab_infotab_java_modcontainer",
+      "src_main_java_com_skd_infotab_infotab_java_playerloggedoutevent",
+      "src_main_java_com_skd_infotab_infotab_java_subscribeevent",
+      "src_main_java_com_skd_infotab_infotab_modeventhandler",
+      "src_main_java_com_skd_infotab_infotab_modeventhandler_changetablistname",
+      "src_main_java_com_skd_infotab_infotab_modeventhandler_onplayerconnect",
+      "src_main_java_com_skd_infotab_infotab_modeventhandler_onplayerdimensionchange",
+      "src_main_java_com_skd_infotab_infotab_modeventhandler_onplayerdisconnect",
+      "src_main_java_com_skd_infotab_infotab_modeventhandler_onplayerrespawn",
+      "src_main_java_com_skd_infotab_infotab_modeventhandler_refreshplayer",
+      "src_main_java_com_skd_infotab_infotab_modeventhandler_registercommands",
+      "tablistnameformat"
+    ],
+    "5": [
+      "mutablecomponent",
+      "player",
+      "rendernametagevent",
+      "src_main_java_com_skd_infotab_afknametaghandler",
+      "src_main_java_com_skd_infotab_afknametaghandler_afknametaghandler",
+      "src_main_java_com_skd_infotab_afknametaghandler_afknametaghandler_onrendernametag",
+      "src_main_java_com_skd_infotab_afknametaghandler_java_eventbussubscriber",
+      "src_main_java_com_skd_infotab_afknametaghandler_java_subscribeevent",
+      "src_main_java_com_skd_infotab_playerlisthandler",
+      "src_main_java_com_skd_infotab_playerlisthandler_java_resourcelocation",
+      "src_main_java_com_skd_infotab_playerlisthandler_playerlisthandler",
+      "src_main_java_com_skd_infotab_playerlisthandler_playerlisthandler_checkforaliases",
+      "src_main_java_com_skd_infotab_playerlisthandler_playerlisthandler_extracttokensfromformat",
+      "src_main_java_com_skd_infotab_playerlisthandler_playerlisthandler_makedimensioncomponent",
+      "src_main_java_com_skd_infotab_playerlisthandler_playerlisthandler_parsecolor",
+      "src_main_java_com_skd_infotab_playerlisthandler_playerlisthandler_resolvedimensioncolor",
+      "src_main_java_com_skd_infotab_playerlisthandler_playerlisthandler_resolvetokenvalue",
+      "textcolor"
+    ],
+    "6": [
+      "custompacketpayload",
+      "friendlybytebuf",
+      "key",
+      "src_main_java_com_skd_infotab_afkactivityclienthandler",
+      "src_main_java_com_skd_infotab_afkactivityclienthandler_afkactivityclienthandler",
+      "src_main_java_com_skd_infotab_afkactivityclienthandler_afkactivityclienthandler_onclienttick",
+      "src_main_java_com_skd_infotab_afkactivityclienthandler_afkactivityclienthandler_onkey",
+      "src_main_java_com_skd_infotab_afkactivityclienthandler_afkactivityclienthandler_onmousebutton",
+      "src_main_java_com_skd_infotab_afkactivityclienthandler_java_eventbussubscriber",
+      "src_main_java_com_skd_infotab_afkactivityclienthandler_java_post",
+      "src_main_java_com_skd_infotab_afkactivityclienthandler_java_subscribeevent",
+      "src_main_java_com_skd_infotab_network_activitypingpacket",
+      "src_main_java_com_skd_infotab_network_activitypingpacket_activitypingpacket",
+      "src_main_java_com_skd_infotab_network_activitypingpacket_activitypingpacket_type",
+      "src_main_java_com_skd_infotab_network_activitypingpacket_java_override",
+      "streamcodec",
+      "type"
+    ],
+    "7": [
+      "build_gradle",
+      "build_libs_info_tab_1_21_1_neoforge_21_1_249_jar",
+      "docs_curseforge_project_description_md",
+      "docs_curseforge_project_vars_md",
+      "docs_curseforge_versions_version_md",
+      "gitlab_com_stalking_dragons_minecraft_info_tab_git",
+      "gradle_properties",
+      "info_tab_mod",
+      "meta_inf_neoforge_mods_toml",
+      "minecraft_1_21_1_neoforge_21_1_249_production",
+      "settings_gradle"
+    ],
+    "8": [
+      "booleanvalue",
+      "configvalue",
+      "enumvalue",
+      "intvalue",
+      "modconfigspec",
+      "src_main_java_com_skd_infotab_config",
+      "src_main_java_com_skd_infotab_config_config",
+      "src_main_java_com_skd_infotab_config_config_validatealiasformat",
+      "src_main_java_com_skd_infotab_config_config_validatecolorformat",
+      "src_main_java_com_skd_infotab_config_config_validatedimensionid"
+    ],
+    "9": [
+      "src_main_java_com_skd_infotab_commonutils",
+      "src_main_java_com_skd_infotab_commonutils_commonutils",
+      "src_main_java_com_skd_infotab_commonutils_commonutils_customcolortoint",
+      "src_main_java_com_skd_infotab_commonutils_commonutils_dimensiontostring",
+      "src_main_java_com_skd_infotab_commonutils_commonutils_hextoint",
+      "src_main_java_com_skd_infotab_commonutils_commonutils_rgbtoint",
+      "src_main_java_com_skd_infotab_commonutils_commonutils_splitidentifier",
+      "src_main_java_com_skd_infotab_commonutils_commonutils_totitlecase",
+      "src_main_java_com_skd_infotab_commonutils_java_resourcelocation"
+    ],
+    "10": [
+      ".gitlab-ci.yml_publish-public",
+      "CHANGELOG.md_0.0.0-beta.1",
+      "gradle.properties_mod_curseforge_project_id",
+      "gradle.properties_mod_group_id",
+      "gradle.properties_mod_version"
+    ],
+    "11": [
+      "src_main_java_com_skd_infotab_infotabclient",
+      "src_main_java_com_skd_infotab_infotabclient_infotabclient",
+      "src_main_java_com_skd_infotab_infotabclient_infotabclient_infotabclient",
+      "src_main_java_com_skd_infotab_infotabclient_java_mod",
+      "src_main_java_com_skd_infotab_infotabclient_java_modcontainer"
+    ],
+    "12": [
+      "claude_claude_claude_info_tab",
+      "codex_docs_scripts_curseforge_upload_ps1",
+      "docs_workflow_info_tab_26_2",
+      "readme_info_tab"
+    ],
+    "13": [
+      "gradlew",
+      "gradlew__entry",
+      "gradlew_die",
+      "gradlew_warn"
+    ],
+    "14": [
+      "docs_curseforge_versions_0_0_0_beta_1_md",
+      "src_main_resources_assets_info_tab_icon_png",
+      "src_main_resources_info_tab_png"
+    ],
+    "15": [
+      "build"
+    ],
+    "16": [
+      "settings"
+    ],
+    "17": [
+      "src_auth_session_py"
+    ]
+  },
+  "cohesion": {
+    "0": 0.05855855855855856,
+    "1": 0.1402116402116402,
+    "2": 0.24923076923076923,
+    "3": 0.15666666666666668,
+    "4": 0.13333333333333333,
+    "5": 0.22875816993464052,
+    "6": 0.19852941176470587,
+    "7": 0.18181818181818182,
+    "8": 0.2222222222222222,
+    "9": 0.3333333333333333,
+    "10": 0.4,
+    "11": 0.6,
+    "12": 0.6666666666666666,
+    "13": 0.8333333333333334,
+    "14": 0.6666666666666666,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_main_java_com_skd_infotab_platform_services_iconfighelper_iconfighelper",
+      "label": "IConfigHelper",
+      "degree": 29
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_platform_neoforgeconfighelper_neoforgeconfighelper",
+      "label": "NeoForgeConfigHelper",
+      "degree": 26
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_customcommands_customcommands",
+      "label": "CustomCommands",
+      "degree": 22
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_afktracker_afktracker",
+      "label": "AfkTracker",
+      "degree": 15
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_playerlisthandler_playerlisthandler",
+      "label": "PlayerListHandler",
+      "degree": 11
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_config_config",
+      "label": "Config",
+      "degree": 10
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_infotab_modeventhandler",
+      "label": "ModEventHandler",
+      "degree": 9
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_commonutils_dimensionposition",
+      "label": "DimensionPosition",
+      "degree": 8
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_commonutils_commonutils",
+      "label": "CommonUtils",
+      "degree": 7
+    },
+    {
+      "id": "src_main_java_com_skd_infotab_network_activitypingpacket_activitypingpacket",
+      "label": "ActivityPingPacket",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Info TAB Workflow",
+      "target": "CurseForge Upload PS1",
+      "source_files": [
+        "docs/WORKFLOW_INFO_TAB_26-2.md",
+        "../../codex-docs/scripts/curseforge-upload.ps1"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ code); connects across different repos/directories"
+    },
+    {
+      "source": "Info TAB Mod",
+      "target": "Gradle Properties",
+      "source_files": [
+        "src/main/java/info_tab/InfoTab.java",
+        "gradle.properties"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (code ↔ doc); connects across different repos/directories"
+    },
+    {
+      "source": "Info TAB Mod",
+      "target": "META-INF Neoforge Mods TOML",
+      "source_files": [
+        "src/main/java/info_tab/InfoTab.java",
+        "META-INF/neoforge.mods.toml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (code ↔ doc); connects across different repos/directories"
+    },
+    {
+      "source": "v0.0.0-beta.1 - Port to Minecraft 1.21.1",
+      "target": "Info Tab Icon",
+      "source_files": [
+        "docs/curseforge/versions/0.0.0-beta.1.md",
+        "src/main/resources/assets/info_tab/icon.png"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories"
+    },
+    {
+      "source": "v0.0.0-beta.1 - Port to Minecraft 1.21.1",
+      "target": "Info Tab UI",
+      "source_files": [
+        "docs/curseforge/versions/0.0.0-beta.1.md",
+        "src/main/resources/info_tab.png"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `IConfigHelper` connect `Color Management` to `NeoForge Config`?",
+      "why": "High betweenness centrality (0.190) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `NeoForgeConfigHelper` connect `NeoForge Config` to `Color Management`?",
+      "why": "High betweenness centrality (0.150) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `PlayerListHandler` connect `Player List` to `Color Management`, `NeoForge Config`, `Mod Events`?",
+      "why": "High betweenness centrality (0.096) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `PREPEND`, `APPEND`, `0.0.0-beta.1` to the rest of the system?",
+      "why": "17 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Color Management` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05855855855855856 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `NeoForge Config` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1402116402116402 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Mod Events` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "build.gradle": {
+    "mtime": 1788305621.0789201,
+    "ast_hash": "08ac519782e28fcc9fc3a4f7d68b928a",
+    "semantic_hash": "08ac519782e28fcc9fc3a4f7d68b928a"
+  },
+  "gradlew": {
+    "mtime": 1788305621.173895,
+    "ast_hash": "794669d78aef1dd5c7d889ef618b311a",
+    "semantic_hash": "794669d78aef1dd5c7d889ef618b311a"
+  },
+  "settings.gradle": {
+    "mtime": 1788305621.1324189,
+    "ast_hash": "58a5df05c6546d7d2671a516793e02e7",
+    "semantic_hash": "58a5df05c6546d7d2671a516793e02e7"
+  },
+  "src/main/java/com/skd/infotab/AfkActivityClientHandler.java": {
+    "mtime": 1788305729.6710322,
+    "ast_hash": "67d0a0c5ffdd263d3575aeaff769743a",
+    "semantic_hash": "67d0a0c5ffdd263d3575aeaff769743a"
+  },
+  "src/main/java/com/skd/infotab/AfkNameTagHandler.java": {
+    "mtime": 1788305729.6086645,
+    "ast_hash": "5ff6c7223390c57deef24591c84adccb",
+    "semantic_hash": "5ff6c7223390c57deef24591c84adccb"
+  },
+  "src/main/java/com/skd/infotab/AfkTracker.java": {
+    "mtime": 1788305621.468566,
+    "ast_hash": "74c302e08abf47f325aca20e2197b8d7",
+    "semantic_hash": "74c302e08abf47f325aca20e2197b8d7"
+  },
+  "src/main/java/com/skd/infotab/CommonUtils.java": {
+    "mtime": 1788305729.293953,
+    "ast_hash": "da583a708f6d0d181862a100889c66ab",
+    "semantic_hash": "da583a708f6d0d181862a100889c66ab"
+  },
+  "src/main/java/com/skd/infotab/Config.java": {
+    "mtime": 1788305621.499452,
+    "ast_hash": "c9d0727be0035b2dd777771c6f409c2e",
+    "semantic_hash": "c9d0727be0035b2dd777771c6f409c2e"
+  },
+  "src/main/java/com/skd/infotab/CustomCommands.java": {
+    "mtime": 1788305729.534526,
+    "ast_hash": "c68dffb050912534c8c966832d881a9a",
+    "semantic_hash": "c68dffb050912534c8c966832d881a9a"
+  },
+  "src/main/java/com/skd/infotab/InfoTab.java": {
+    "mtime": 1788305621.5803602,
+    "ast_hash": "79fa7214f4461e7e34427c6ac7e7d5c8",
+    "semantic_hash": "79fa7214f4461e7e34427c6ac7e7d5c8"
+  },
+  "src/main/java/com/skd/infotab/InfoTabClient.java": {
+    "mtime": 1788305621.529468,
+    "ast_hash": "1b59bf3f38cf21cdabb555226dc815f4",
+    "semantic_hash": "1b59bf3f38cf21cdabb555226dc815f4"
+  },
+  "src/main/java/com/skd/infotab/PlayerListHandler.java": {
+    "mtime": 1788305729.5539446,
+    "ast_hash": "32ccc94109bb6bce34e28e1a743d2b10",
+    "semantic_hash": "32ccc94109bb6bce34e28e1a743d2b10"
+  },
+  "src/main/java/com/skd/infotab/PlayerListHandlerNeoForge.java": {
+    "mtime": 1788305621.5440948,
+    "ast_hash": "6dc48be6a23f7d661697b5dfc590fdca",
+    "semantic_hash": "6dc48be6a23f7d661697b5dfc590fdca"
+  },
+  "src/main/java/com/skd/infotab/network/ActivityPingPacket.java": {
+    "mtime": 1788305729.4205623,
+    "ast_hash": "ccb38eba09d800b518ed4faeadc8e313",
+    "semantic_hash": "ccb38eba09d800b518ed4faeadc8e313"
+  },
+  "src/main/java/com/skd/infotab/platform/NeoForgeConfigHelper.java": {
+    "mtime": 1788305621.443995,
+    "ast_hash": "c49c84fd688426055d0b2ad1d499ef85",
+    "semantic_hash": "c49c84fd688426055d0b2ad1d499ef85"
+  },
+  "src/main/java/com/skd/infotab/platform/Services.java": {
+    "mtime": 1788305621.455103,
+    "ast_hash": "baf9928f17caa5cc753a90fde73f44c7",
+    "semantic_hash": "baf9928f17caa5cc753a90fde73f44c7"
+  },
+  "src/main/java/com/skd/infotab/platform/services/IConfigHelper.java": {
+    "mtime": 1788305621.4230464,
+    "ast_hash": "82e7e098d4039777510c4586895a7d89",
+    "semantic_hash": "82e7e098d4039777510c4586895a7d89"
+  },
+  "src/main/resources/assets/info_tab/lang/en_us.json": {
+    "mtime": 1788305621.7019122,
+    "ast_hash": "cdeeb001b1d2cfce657339002a81d79b",
+    "semantic_hash": "cdeeb001b1d2cfce657339002a81d79b"
+  },
+  "src/main/resources/info_tab.mixins.json": {
+    "mtime": 1788305621.9443624,
+    "ast_hash": "fbe58fb2ab9deff199f860627a10bb15",
+    "semantic_hash": "fbe58fb2ab9deff199f860627a10bb15"
+  },
+  "src/main/resources/info_tab.neoforge.mixins.json": {
+    "mtime": 1788305621.9566607,
+    "ast_hash": "b06329a8ae8b9b3f2775c018a970cf2a",
+    "semantic_hash": "b06329a8ae8b9b3f2775c018a970cf2a"
+  }
+}
