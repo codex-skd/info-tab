@@ -33,7 +33,6 @@ NeoForge mod that displays player info in the tab list: dimension, AFK status, a
 
 The JAR is generated at `build/libs/infotab-26.2-neoforge-<version>.jar`.
 
-## Credits
+## Credits & License
 
-Original mod: **DimensionViewer** by *Sick Stick 10*.
-Ported to NeoForge by **Stalking Dragons**.
+Fork of [Dimension Viewer](https://www.curseforge.com/minecraft/mc-mods/dimension-viewer) by **Ewan Selkirk** (a.k.a. *Sick_Stick_10*), ported to NeoForge and reworked by **Stalking Dragons**. MIT licensed — see [LICENSE](LICENSE).
