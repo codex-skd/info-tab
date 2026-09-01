@@ -2,6 +2,8 @@
 
 NeoForge mod that displays player info in the tab list for Minecraft 1.21.1: current dimension, AFK status, and more.
 
+> A fork of [Dimension Viewer](https://www.curseforge.com/minecraft/mc-mods/dimension-viewer) by Ewan Selkirk (a.k.a. Sick_Stick_10), ported to NeoForge and reworked by Stalking Dragons. MIT licensed, same as the original. Not affiliated with or endorsed by the original author.
+
 ## Status
 
 Beta (`0.0.0-beta.1`). API port of the stable 26.2 line (1.1.0) to the 1.21.1 API — 14 classes, no dependencies, no mixins. `./gradlew build` and `./gradlew runServer` verified: `Done (6.3s)`, 0 FATAL. Client-side rendering (name tag overlay, tab list) compiles but is not yet verified in-game.
@@ -40,6 +42,6 @@ Beta (`0.0.0-beta.1`). API port of the stable 26.2 line (1.1.0) to the 1.21.1 AP
 
 The JAR is generated at `build/libs/info_tab-1.21.1-neoforge-21.1.249-<version>.jar`.
 
-## Credits
+## Credits & License
 
-An original mod by **Stalking Dragons**, inspired by *DimensionViewer* by *Sick Stick 10*.
+Fork of [Dimension Viewer](https://www.curseforge.com/minecraft/mc-mods/dimension-viewer) by **Ewan Selkirk** (a.k.a. *Sick_Stick_10*), ported to NeoForge and reworked by **Stalking Dragons**. MIT licensed — see [LICENSE](LICENSE).

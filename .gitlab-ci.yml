@@ -29,7 +29,7 @@ publish-public:
 
     - git rm -rf --ignore-unmatch --quiet . 2>/dev/null || true
 
-    - git checkout "$CI_COMMIT_SHA" -- src/ build.gradle settings.gradle gradle.properties gradlew gradlew.bat .gitignore README.md CHANGELOG.md
+    - git checkout "$CI_COMMIT_SHA" -- src/ build.gradle settings.gradle gradle.properties gradlew gradlew.bat .gitignore README.md CHANGELOG.md LICENSE
 
     - git checkout "$CI_COMMIT_SHA" -- libs/ 2>/dev/null || true
 

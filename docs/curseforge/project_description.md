@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/badge/loader-NeoForge-orange?style=plastic&logo=curseforge" alt="NeoForge">
 <img src="https://img.shields.io/badge/minecraft-26.2%20%7C%201.21.1-blue?style=plastic" alt="Minecraft 26.2 and 1.21.1">
 <img src="https://img.shields.io/badge/side-client%20%2B%20server-brightgreen?style=plastic" alt="Client and Server">
-<img src="https://img.shields.io/badge/config-in--game%20%2F%20screen-lightgrey?style=plastic" alt="In-game config">
+<img src="https://img.shields.io/badge/license-MIT-lightgrey?style=plastic" alt="MIT">
 </p>
 
 <br>
@@ -22,7 +22,7 @@
 <td width="65%">
 <p>Info TAB shows each player's current <strong>dimension</strong> and <strong>AFK status</strong> right in the tab list. See who's away, where everyone is, and never ask "where is everyone?" again. Per-dimension colours, custom aliases, a token-based display format and a runtime <code>/infotab</code> command make it fully configurable without a restart. An <code>[AFK]</code> tag also appears above inactive players' heads.</p>
 
-<p>An original mod by <strong>Stalking Dragons</strong>, inspired by <em>DimensionViewer</em> by <em>Sick Stick 10</em>. It adds no gameplay content &mdash; only tab-list and name-tag information.</p>
+<p>A fork of <a href="https://www.curseforge.com/minecraft/mc-mods/dimension-viewer"><strong>Dimension Viewer</strong></a> by <em>Ewan Selkirk</em> (a.k.a. <em>Sick_Stick_10</em>), ported to NeoForge and reworked by <strong>Stalking Dragons</strong>. Distributed under the same licence (MIT). It adds no gameplay content &mdash; only tab-list and name-tag information. Not affiliated with or endorsed by the original author.</p>
 </td>
 <td width="35%" align="center">
 <a href="https://codex.skdragons.com/" target="_blank"><img src="https://node-files.skdragons.com/uploads/MINECRAFT/Codex/logo_codex_stalking_dragons.png" alt="Codex Stalking Dragons" width="160"></a>
@@ -108,9 +108,9 @@
 
 <br>
 
-<h2>&#128591; Credits</h2>
+<h2>&#128591; Credits &amp; License</h2>
 
-<p>An original mod by <strong>Stalking Dragons</strong>, inspired by <em>DimensionViewer</em> by <em>Sick Stick 10</em>.</p>
+<p>Info TAB is a fork of <a href="https://www.curseforge.com/minecraft/mc-mods/dimension-viewer">Dimension Viewer</a> by <strong>Ewan Selkirk</strong> (a.k.a. <em>Sick_Stick_10</em>), ported to NeoForge and reworked by <strong>Stalking Dragons</strong>. Released under the <strong>MIT</strong> license, the same as the original. Not affiliated with or endorsed by the original author.</p>
 
 <br>
 <br>
