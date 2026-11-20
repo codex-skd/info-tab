@@ -1,0 +1,23 @@
+{
+	"itemGroup.info_tab": "Info TAB",
+	"info_tab.configuration.title": "Info TAB-Konfiguration",
+	"info_tab.configuration.section.info_tab.common.toml": "Allgemeine Info TAB-Konfiguration",
+	"info_tab.configuration.section.info_tab.common.toml.title": "Info TAB-Konfiguration",
+	"info_tab.configuration.general": "Allgemeine Konfiguration",
+	"info_tab.configuration.customization": "Anpassungen",
+	"info_tab.configuration.listFormat": "Anzeigeformat",
+	"info_tab.configuration.dimPosition": "Position der Dimensionsmarkierung",
+	"info_tab.configuration.enableAliases": "Dimensions-Aliase aktivieren",
+	"info_tab.configuration.dimensionColors": "Dimensionsfarben",
+	"info_tab.configuration.perDimColor": "Farben pro Dimension",
+	"info_tab.configuration.defaultColor": "Standardfarbe",
+	"info_tab.configuration.overworldColor": "Farbe der Oberwelt",
+	"info_tab.configuration.netherColor": "Farbe des Nethers",
+	"info_tab.configuration.endColor": "Farbe des Endes",
+	"info_tab.configuration.moddedDimensions": "Mod-Dimensionen",
+	"info_tab.configuration.dimAliases": "Dimensions-Aliase",
+	"info_tab.configuration.extra": "Zusätzliche Einstellungen",
+	"info_tab.configuration.customColors": "Benutzerdefinierte Dimensionsfarben",
+	"info_tab.configuration.showAfk": "AFK-Status anzeigen",
+	"info_tab.configuration.showDimension": "Dimension anzeigen"
+}

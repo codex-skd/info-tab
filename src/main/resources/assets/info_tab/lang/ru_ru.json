@@ -1,0 +1,23 @@
+{
+	"itemGroup.info_tab": "Info TAB",
+	"info_tab.configuration.title": "Конфигурация Info TAB",
+	"info_tab.configuration.section.info_tab.common.toml": "Общая конфигурация Info TAB",
+	"info_tab.configuration.section.info_tab.common.toml.title": "Конфигурация Info TAB",
+	"info_tab.configuration.general": "Общие настройки",
+	"info_tab.configuration.customization": "Настройки оформления",
+	"info_tab.configuration.listFormat": "Формат отображения",
+	"info_tab.configuration.dimPosition": "Положение метки измерения",
+	"info_tab.configuration.enableAliases": "Включить псевдонимы измерений",
+	"info_tab.configuration.dimensionColors": "Цвета измерений",
+	"info_tab.configuration.perDimColor": "Цвета для каждого измерения",
+	"info_tab.configuration.defaultColor": "Цвет по умолчанию",
+	"info_tab.configuration.overworldColor": "Цвет Верхнего мира",
+	"info_tab.configuration.netherColor": "Цвет Незера",
+	"info_tab.configuration.endColor": "Цвет Энда",
+	"info_tab.configuration.moddedDimensions": "Измерения из модов",
+	"info_tab.configuration.dimAliases": "Псевдонимы измерений",
+	"info_tab.configuration.extra": "Дополнительные настройки",
+	"info_tab.configuration.customColors": "Пользовательские цвета измерений",
+	"info_tab.configuration.showAfk": "Показывать статус AFK",
+	"info_tab.configuration.showDimension": "Показывать измерение"
+}

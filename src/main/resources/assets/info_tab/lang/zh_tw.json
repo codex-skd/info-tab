@@ -1,0 +1,23 @@
+{
+	"itemGroup.info_tab": "Info TAB",
+	"info_tab.configuration.title": "Info TAB 設定",
+	"info_tab.configuration.section.info_tab.common.toml": "Info TAB 通用設定",
+	"info_tab.configuration.section.info_tab.common.toml.title": "Info TAB 設定",
+	"info_tab.configuration.general": "一般設定",
+	"info_tab.configuration.customization": "自訂",
+	"info_tab.configuration.listFormat": "顯示格式",
+	"info_tab.configuration.dimPosition": "維度標籤位置",
+	"info_tab.configuration.enableAliases": "啟用維度別名",
+	"info_tab.configuration.dimensionColors": "維度顏色",
+	"info_tab.configuration.perDimColor": "各維度顏色",
+	"info_tab.configuration.defaultColor": "預設顏色",
+	"info_tab.configuration.overworldColor": "主世界顏色",
+	"info_tab.configuration.netherColor": "地獄顏色",
+	"info_tab.configuration.endColor": "終界顏色",
+	"info_tab.configuration.moddedDimensions": "模組維度",
+	"info_tab.configuration.dimAliases": "維度別名",
+	"info_tab.configuration.extra": "額外設定",
+	"info_tab.configuration.customColors": "自訂維度顏色",
+	"info_tab.configuration.showAfk": "顯示 AFK 狀態",
+	"info_tab.configuration.showDimension": "顯示維度"
+}

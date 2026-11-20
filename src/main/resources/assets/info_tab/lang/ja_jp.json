@@ -1,0 +1,23 @@
+{
+	"itemGroup.info_tab": "Info TAB",
+	"info_tab.configuration.title": "Info TABの設定",
+	"info_tab.configuration.section.info_tab.common.toml": "Info TABの共通設定",
+	"info_tab.configuration.section.info_tab.common.toml.title": "Info TABの設定",
+	"info_tab.configuration.general": "一般設定",
+	"info_tab.configuration.customization": "カスタマイズ",
+	"info_tab.configuration.listFormat": "表示形式",
+	"info_tab.configuration.dimPosition": "ディメンションタグの位置",
+	"info_tab.configuration.enableAliases": "ディメンションのエイリアスを有効にする",
+	"info_tab.configuration.dimensionColors": "ディメンションの色",
+	"info_tab.configuration.perDimColor": "ディメンションごとの色",
+	"info_tab.configuration.defaultColor": "デフォルトの色",
+	"info_tab.configuration.overworldColor": "オーバーワールドの色",
+	"info_tab.configuration.netherColor": "ネザーの色",
+	"info_tab.configuration.endColor": "エンドの色",
+	"info_tab.configuration.moddedDimensions": "MODのディメンション",
+	"info_tab.configuration.dimAliases": "ディメンションのエイリアス",
+	"info_tab.configuration.extra": "追加設定",
+	"info_tab.configuration.customColors": "カスタムディメンションの色",
+	"info_tab.configuration.showAfk": "AFK状態を表示",
+	"info_tab.configuration.showDimension": "ディメンションを表示"
+}
