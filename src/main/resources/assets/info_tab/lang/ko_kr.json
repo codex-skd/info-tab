@@ -1,0 +1,23 @@
+{
+	"itemGroup.info_tab": "Info TAB",
+	"info_tab.configuration.title": "Info TAB 설정",
+	"info_tab.configuration.section.info_tab.common.toml": "Info TAB 공통 설정",
+	"info_tab.configuration.section.info_tab.common.toml.title": "Info TAB 설정",
+	"info_tab.configuration.general": "일반 설정",
+	"info_tab.configuration.customization": "사용자 지정",
+	"info_tab.configuration.listFormat": "표시 형식",
+	"info_tab.configuration.dimPosition": "차원 태그 위치",
+	"info_tab.configuration.enableAliases": "차원 별칭 활성화",
+	"info_tab.configuration.dimensionColors": "차원 색상",
+	"info_tab.configuration.perDimColor": "차원별 색상",
+	"info_tab.configuration.defaultColor": "기본 색상",
+	"info_tab.configuration.overworldColor": "오버월드 색상",
+	"info_tab.configuration.netherColor": "네더 색상",
+	"info_tab.configuration.endColor": "엔드 색상",
+	"info_tab.configuration.moddedDimensions": "모드 추가 차원",
+	"info_tab.configuration.dimAliases": "차원 별칭",
+	"info_tab.configuration.extra": "추가 설정",
+	"info_tab.configuration.customColors": "사용자 지정 차원 색상",
+	"info_tab.configuration.showAfk": "AFK 상태 표시",
+	"info_tab.configuration.showDimension": "차원 표시"
+}

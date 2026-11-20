@@ -1,0 +1,23 @@
+{
+	"itemGroup.info_tab": "Info TAB",
+	"info_tab.configuration.title": "Konfiguracja Info TAB",
+	"info_tab.configuration.section.info_tab.common.toml": "Wspólna konfiguracja Info TAB",
+	"info_tab.configuration.section.info_tab.common.toml.title": "Konfiguracja Info TAB",
+	"info_tab.configuration.general": "Konfiguracja ogólna",
+	"info_tab.configuration.customization": "Personalizacja",
+	"info_tab.configuration.listFormat": "Format wyświetlania",
+	"info_tab.configuration.dimPosition": "Pozycja etykiety wymiaru",
+	"info_tab.configuration.enableAliases": "Włącz aliasy wymiarów",
+	"info_tab.configuration.dimensionColors": "Kolory wymiarów",
+	"info_tab.configuration.perDimColor": "Kolory dla każdego wymiaru",
+	"info_tab.configuration.defaultColor": "Kolor domyślny",
+	"info_tab.configuration.overworldColor": "Kolor Nadziemia",
+	"info_tab.configuration.netherColor": "Kolor Netheru",
+	"info_tab.configuration.endColor": "Kolor Kresu",
+	"info_tab.configuration.moddedDimensions": "Wymiary z modów",
+	"info_tab.configuration.dimAliases": "Aliasy wymiarów",
+	"info_tab.configuration.extra": "Dodatkowe ustawienia",
+	"info_tab.configuration.customColors": "Niestandardowe kolory wymiarów",
+	"info_tab.configuration.showAfk": "Pokaż status AFK",
+	"info_tab.configuration.showDimension": "Pokaż wymiar"
+}
